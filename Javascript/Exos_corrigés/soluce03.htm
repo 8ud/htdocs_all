@@ -1,0 +1,32 @@
+: <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    faites varier la variable heure dans le code source ...<br>
+   résultats en mode console (F12)
+    <script>
+        var heure = 22;
+if(typeof(heure)=="number" && heure >= 0 && heure < 24) {
+        // heure valide, on code les tests
+       if(heure >=6 && heure < 12){
+           console.log("Bon matin");
+       } else if(heure >=12 && heure < 14){
+           console.log("Bon appétit");
+       } else if(heure >=12 && heure < 18){
+           console.log("Bon matin");
+       } else if(heure >18 && heure < 22){
+           console.log("Bon soirée");
+       } else {
+            console.log('Bonne nuit');
+       }
+	} else {
+		console.log('heure invalide');	
+	}
+</script>
+</body>
+</html>

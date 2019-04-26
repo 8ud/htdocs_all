@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // sans les taper en console, essayez de deviner la valeur de chaque variable
+var v1 = true + true;
+var v2 = 100 - false *2;
+var v3 = "toto" + 23;
+var v4 = 10 * "10";
+var v5 = false * 100;
+var v6 = (true * 2) - "bubule";
+var v7 = "truc" + "muche";
+var v8 = "truc" - "muche";
+var v9 = 5 + null;
+//var v10 = 100 - tva; // provoque une erreur, tva n'est pas défini
+
+console.log("v1 vaut "+v1+" type : "+typeof(v1));
+console.log("v2 vaut "+v2+" type : "+typeof(v2));
+console.log("v3 vaut "+v3+" type : "+typeof(v3));
+console.log("v4 vaut "+v4+" type : "+typeof(v4));
+console.log("v5 vaut "+v5+" type : "+typeof(v5));
+console.log("v6 vaut "+v6+" type : "+typeof(v6));
+console.log("v7 vaut "+v7+" type : "+typeof(v7));
+console.log("v8 vaut "+v8+" type : "+typeof(v8));
+console.log("v9 vaut "+v9+" type : "+typeof(v9));
+
+/** affichage automatique
+for(var i=1;i<=9;i++) {
+    var variable = eval(`v${i}`); // horrible, sale et méchant
+    console.log("v"+i+" vaut "+variable+" type : "+typeof(variable));
+}
+*/
+        </script>
+</body>
+</html>

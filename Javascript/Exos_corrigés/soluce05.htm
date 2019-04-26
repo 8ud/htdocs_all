@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+Afficher la console avec F12
+
+    <script>
+    ////EXO 1 : transformer en ternaire
+    /**var reponse, question = "pourquoi";
+    if (question === "sur la vie, l'univers et le reste") {
+        reponse = '...42';
+    } else {
+        reponse = 'Demande à ta mère !';
+    }
+*/
+    var reponse, question = "pourquoi";
+    reponse=question === "sur la vie, l'univers et le reste"?'...42':'Demande à ta mère !';
+        console.log("question="+question+" ... reponse = "+reponse);
+   
+ /**  ///EXO 2 : transformer en ternaire
+var gratte = "Strat", model = "droitier", player;
+if(gratte == "Strat" && model =="droitier"){
+    player = "Eric (God)";
+} else {
+    player = "Peu importe";
+}
+*/
+var gratte = "Strat", model = "droitier", player;
+player = gratte == "Strat" && model =="droitier" ? "Eric (God)" : "Peu importe";
+
+console.log("gratte="+gratte+" ... model = "+model+" player = "+player);
+
+/**
+/// EXO 3 : transformer en IF/ELSE standard
+var moto = "Aprilia";
+var couleur = moto == "kawa"? "vert":"pas green";
+*/
+var moto = "Aprilia", couleur;
+if(moto=="kawa"){
+    couleur = "vert";
+} else {
+    couleur = "pas vert"
+};
+console.log("moto="+moto+" ... couleur = "+couleur);
+
+
+/// EXO 4 écrire en ternaire une condition qui assigne "Bruce Banner" ou "Hulk" à la variable nom selon que colère vaut vrai ou faux.
+
+var colere=true, nom;
+nom=colere===false ?  "Bruce Banner" : "Hulk" ;
+console.log("colere="+colere+" ... nom = "+nom);
+/// EXO 5
+//Inverser la logique de vérification dans l'exercice précédent : si la condition vérifiée est true, vérifier false et inversement.
+var colere=true, nom;
+nom=colere!==true ?  "Bruce Banner" : "Hulk" ;
+console.log("colere="+colere+" ... nom = "+nom);
+   </script>
+</body>
+</html>

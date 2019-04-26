@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="popup" id="btn">
+	
+	<script>
+		document.querySelector('#btn').addEventListener('click',popw);
+		var screenH=screen.availHeight;
+		var screenW=screen.availWidth;
+		var popupH = 480;
+		var popupW = 640;
+		var popupY = (screenH-popupH)/2;
+		var popupX = (screenW-popupW)/2;
+		var popup;
+		function popw(){
+			popup =window.open("https://www.ifpa-ecole.net","popup", "left="+popupX+",top="+popupY+",width="+popupW+",height="+popupH);
+		}
+	</script>
+
+</body>
+</html>

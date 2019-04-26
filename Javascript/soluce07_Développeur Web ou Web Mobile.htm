@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var chaineMaj="",nospace="",envers="",chaine = "À Xanadu, lui, Kubla Khan se décréta un fastueux palais des plaisirs  ";
+       /* MISE EN MAJUSCULE*/
+       /** POURQUOI FAIRE SIMPLE ?? **/
+       // les indices des lettres à changer pour XANADU sont 2-7 
+         var mot1="Xanadu";
+         var debutMot1 = chaine.indexOf(mot1);
+         var finMot1 = debutMot1+mot1.length;
+
+       // et pour KUBLA KHAN 15-24 
+       var mot2="Kubla Khan";
+         var debutMot2 = chaine.indexOf(mot2);
+         var finMot2 = debutMot2+mot2.length;
+
+       // parcourir la chaine, extraire chaque caractère
+       // s'il fait partie de ceux à modifier
+       // le transformer en majuscule
+       //  ajouter le caractère transforme ou pas à une nouvelle chaine
+       // nomme chaineMaj
+       for(var i=0;i<chaine.length;i++) {
+          var lettre=chaine.charAt(i);
+          if((i>=debutMot1 && i<finMot1) || (i>=debutMot2 && i<finMot2)){
+            lettre=lettre.toUpperCase();
+        }
+        chaineMaj+=lettre;
+       }
+       
+      
+      //... évidemment, on pouvait aussi simplement faire :
+       chaineMaj = chaine.replace(mot1, mot1.toUpperCase());
+       chaineMaj = chaineMaj.replace(mot2, mot2.toUpperCase());
+      
+
+       
+       nospace = chaineMaj; // on clone la chaine traitée
+       
+       /*SUPPRESSION DES ESPACES*/
+       //replace ne remplace que la première ocurrence trouvée
+       // utiliser un tant que espaces trouvés...
+
+    while(nospace.indexOf(" ")!=-1 ){ // tant qu'on trouve des espaces
+        nospace = nospace.replace(' ',''); // supprimer le premier rencontré
+        
+    }
+     /*SUPPRESSION DES VIRGULES*/
+     // même logique que précédemment (vive les regex !)
+    while(nospace.indexOf(",")!=-1) {
+        nospace = nospace.replace(',',''); // supprimer le premier rencontré
+    }
+
+    var lngChaine = nospace.length-1; // indice du dernier caractère
+    // boucle du dernier indice jusqu'à 0
+    // extraire caractère situé à l'indice
+    // l'injecter dans uen nouvelle chaine envers
+    for(var i=lngChaine;i>=0;i--){
+        envers+=nospace.charAt(i);
+    }
+    console.log(envers);
+    </script>
+</body>
+</html>

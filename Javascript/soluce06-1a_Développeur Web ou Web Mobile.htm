@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+
+/*Exo 6-1a (échauffement) : Ecrire un script qui affiche tous les nombres pairs jusqu'à la valeur donnée par l'utilisateur à l'aide de var fin = prompt("J'm'arrête où ?");. */
+
+//EXO 6-1a
+
+// on pose la question à l'utilisateur
+var fin = prompt("J'm'arrête où ?");
+
+// on transforme la valeur entrée en nombre, par prudence
+fin = parseInt(fin);
+
+// boucle si fin est supérieur à 2, remier nombre pair
+if(fin > 2) {
+   document.write('Nombres pairs jusqu\'à '+fin+ "<br>");
+   for( var i=0;i<=fin; i+=2) {
+      document.write(i+" ");
+   }
+}
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+Necessite la base de films CINEMA
+
+Instructions dans le .html
+
+Attention : la librairie JQUERY Bootstrap ne comprend pas $.get : 
+il faut utiliser celle de Google...

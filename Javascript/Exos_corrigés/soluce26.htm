@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input type="button" value="Ouvrir popup" id="popOpenBtn">
+        <input type="button" value="Fermer popup" id="popCloseBtn">
+        <input type="button" value="Focus popup" id="popFocusBtn">
+    </div>
+
+    <script>
+        var btnOpen = document.querySelector('#popOpenBtn');
+        var btnClose = document.querySelector('#popCloseBtn');
+        var btnFocus = document.querySelector('#popFocusBtn');
+        btnOpen.addEventListener("click", popOpen);
+        btnClose.addEventListener("click", popClose);
+        btnFocus.addEventListener("click", popFocus);
+        // Variable globale de référence popup
+        var myPopup = "";
+
+        function popOpen() {
+            var popUrl = "https://www.google.fr";
+            var popName = "myPopup";
+            var popParams = "left=0,top=0,height=1000,width=1920";
+            myPopup = window.open(popUrl, popName, popParams);
+        }
+
+        function popFocus() {
+            myPopup.focus();
+        }
+
+        function popClose() {
+            myPopup.close();
+        }
+    </script>
+</body>
+
+</html>

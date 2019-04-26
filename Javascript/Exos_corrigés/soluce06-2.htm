@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <h1>Regardez en console avec F12</h1>
+    <script>
+    /*
+      Ecrire une fonction F2C qui convertit les degrés Farenheit en Celsius et une procédure C2F qui fait le contraire (C en F).
+      Convertir 100°C, 0°C, -20°C, 451°F, 85°F et 32°F (résultats affichés en console).
+
+      Note :   (Farenheit - 32) * 5/9 = Celsius
+      (Celsius * 9/5 )+ 32 = Farenheit
+
+    */
+
+      // utilisation de la fonction
+    console.log(F2C(100));
+    console.log(F2C(0));
+    console.log(F2C(-20));
+
+
+    // utilisation de la procédure
+    C2F(451);
+    C2F(85);
+    C2F(32);
+
+// si on voulait changer la méthode d'affichage, il suffirait, avec la fonction, de traiter le résultat renvoyé en console.log, en alert ou de toute autre manière souhaitée.
+
+// A l'opposé, avec la procédure QUI NE RENVOIT RIEN et se charge directement de l'affichage,  il serait nécessaire de modifier la code dans les accolades de la fonction {}... bien moins souple !
+
+
+      function C2F(degC){
+      var degF = (degC * 9/5) + 32;   
+      console.log(degC+"°C =  "+degF+" °F");
+    }
+
+
+      function F2C(degF){
+         // convertit farenheit en celsius
+         var degC = (degF-32) * 5/9;
+         return degF+"°F =  "+degC+" °C";
+      }
+    </script>
+</body>
+</html>

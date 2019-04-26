@@ -1,0 +1,44 @@
+*{
+	/*box-sizing: border-box;*/
+	font-family:lato;
+}
+.wrapper {
+width:860px;
+padding:10px;
+margin:0 auto;
+border:2px solid #ccc;
+display:flex;
+flex-direction: column;
+background-color: #dfdfdf;
+}
+#visu{
+height:645px;
+
+}
+#visu img {
+   height:100%;
+}
+#desc {padding-top:15px;height:80px;font-size:1.1em;font-style: italic;font-weight: bold;color: #616161;text-align:center;}
+#desc img {
+	width:auto;
+}
+#vignettes {
+display:flex;
+justify-content: space-between;
+padding:30px;
+}
+
+.vignette {
+cursor:pointer;
+}
+.vignette img {
+	padding:15px;
+	background-color: white;
+	outline:1px solid #ccc;
+	box-shadow: 0 0 40px rgba(0,0,0,0.25);
+	transition:all 0.3s ease;
+}
+.vignette:hover img {
+	box-shadow: 0 0 60px rgba(0,0,0,0.35);
+	transform:scale(1.1);
+}

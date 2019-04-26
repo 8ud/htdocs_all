@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+
+<body>
+	<p>La difficulté vient du fait que ouverture et fermeture vont intervenir DANS des fonctions...<br>
+		mais doivent manipuler une même variable : celle correspondant à la fenêtre ouverte.<br>
+		Il faut donc que cette variable soit...globale.</p>
+
+
+	<div>
+		<input type="button" value="Ouvrir popup" id="popOpenBtn">
+		<input type="button" value="Fermer popup" id="popCloseBtn">
+	</div>
+
+	<script>
+		var btnOpen = document.querySelector('#popOpenBtn');
+		var btnClose = document.querySelector('#popCloseBtn');
+		btnOpen.addEventListener("click", popOpen);
+		btnClose.addEventListener("click", popClose);
+		// Soluce 1 on peut créer une variable globale dans le corps du script
+		var myPopup = "";
+
+		function popOpen() {
+			var popUrl = "https://www.google.fr";
+			var popName = "myPopup";
+			var popParams = "left=200,top=400,height=640,width=480";
+			// soluce 2 sans var, la variable est globale
+			myPopup = window.open(popUrl, popName, popParams);
+		}
+
+		function popClose() {
+			myPopup.close();
+		}
+	</script>
+</body>
+
+</html>

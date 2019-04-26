@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var clog=function(msg){
+        console.log(msg);
+    }
+    var alo = function (msg) {
+        alert(msg);
+    }
+    var affiche=function(msg){
+        clog(msg);
+        alo(msg);
+    }
+    clog("Ce message en console log");
+    alo("ce message en alert");
+    affiche("message important en console && alert");
+    </script>
+</body>
+</html>

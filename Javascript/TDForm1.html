@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+   <meta charset="UTF-8">
+   <title>TDForm1</title>
+   <meta name="author" content="Fano Pinard">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <style>
+      /* Styles internes */
+        .p{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+border: 2px solid black;
+margin: 15px;
+padding:  20px;
+/* display: inline-block; */
+box-sizing:  border-box;
+width: 50%;
+border-radius: 10px;
+background-color: rgb(200, 251, 234);
+font-weight: bold;
+
+}
+.t{
+
+height: 10px;
+background-color: white;
+
+}
+.red{
+   color: red;
+}
+
+.none{
+    display: none;
+}
+
+.ok{
+
+   border: 3px solid green;
+}
+
+.btn{
+
+   float: none;
+}
+
+
+    </style>
+</head>
+
+<body>
+   <!-- debut page -->
+ 
+      <form action="http://www.pleione.fr/validform">
+         <div class="none p" id="nome"></div>
+         <div class="p">
+            <label for="exampleInputEmail1">Login</label>
+            <input type="text" class="p t" name="login" placeholder="Entrez Login" value="" id="log">
+            <small id="smalllog"></small>
+         </div>
+         <div class="p">
+            <label for="exampleInputEmail1">addresse Email</label>
+            <input type="email" class="form-control" name="email" placeholder="Entrez email" value="" id="courrier">
+         <small id="smallmail"></small>
+      </div>
+      <div class="p">
+         <label for="exampleInputPassword1">Password</label>
+         <input type="password" class="" name="password" id="password" value="" placeholder="Password">
+         <small id="smallpass" class="">de 8 a 16 caractères</small>
+      </div>
+      <div class="p form-check">
+         <input type="checkbox" class="" id="news" name="newsletter">
+         <label class="" for="">Inscription a la newsletter</label>
+         <small id="inscrit"></small>
+         
+      </div>
+      <button type="submit" class=" none btn btn-success" id="sub">Submit</button>
+   </form>
+   
+
+   
+   <!-- fin page -->
+   
+   <script>
+      ///ICI MES SCRIPTS INTERNES
+      // declaration des variables/
+var nome=document.querySelector("#nome");
+      var login = document.querySelector("#log");
+      var mail = document.querySelector("#courrier");
+      var pass = document.querySelector("#password");
+      var smlog = document.querySelector("#smalllog");
+      var smpass = document.querySelector("#smallpass");
+      var valid = document.querySelector("#sub");
+      var news = document.querySelector("#news");
+      var ins = document.getElementById("inscrit");
+      var l =false;
+      var p =false;
+      var m =false;
+
+     // verif login/
+
+      login.addEventListener("blur", util);
+
+      function util() {
+        
+
+         if (login.value.length >= 3) {
+
+           
+             
+             login.classList.add("ok");
+            smlog.innerHTML ="";
+          
+          l = true;
+           
+         } else {
+
+            smlog.innerHTML = "veuillez rentrez un Login";
+            smlog.classList.add  ("red");
+              l = false;
+
+         }     
+         globalVerif();
+      }
+      //verif password/
+      pass.addEventListener("keyup", mdp);
+
+      function mdp() {
+
+
+         if (pass.value.length < 8) {
+
+            smpass.textContent = "8 caractères minimum";
+            smpass.style.color = "#495057";
+            p = false;
+
+         } else if (pass.value.length < 11) {
+
+            smpass.textContent = "mot de passe faible";
+            p = true;
+          
+            smpass.style.color = "#e74c3c";
+            pass.classList.add("ok");
+         
+         } else if (pass.value.length < 14) {
+
+            smpass.textContent = "mot de passe moyen";
+            p = true;
+           
+            pass.classList.add("ok");
+            smpass.style.color = "#f1c40f";
+      
+         } else if (pass.value.length <= 16) {
+
+
+            smpass.textContent = "mot de passe fort";
+            smpass.style.color = "#2ecc71";
+            pass.classList.add("ok");
+            p = true;
+            
+       
+         } else {
+
+            smpass.textContent = "vous-avez rentrez trop de caractères";
+            smpass.style.color = "#495057";
+            pass.style.backgroundColor = "white";
+            p = false;
+           
+         }
+         globalVerif();
+      }
+
+      //verif email/
+      mail.addEventListener("blur", lemail);
+
+      function lemail() {
+           m=mail.value.length !=0?true:false;
+      
+if (mail.value.length !=0){
+
+   mail.classList.add("ok");
+}
+   globalVerif();
+      }
+
+function globalVerif(){
+
+         //validation formulaire/
+         if (l && p && m) {
+           
+            valid.classList.remove("none");
+         } else {
+            valid.classList.add("none");
+         }
+}
+
+         //newsletter/
+        news.addEventListener("change",letter);
+
+         function letter() {
+
+if(news.checked == true){
+
+            ins.textContent = "merci de vous être inscrit";
+
+}else{
+
+   ins.textContent = "";
+
+}
+
+         }
+
+   // comparaison id tableau
+
+        
+         var tableau = ["arthur", "perceval", "lancelot", "caradoc", "bohort", "leodagan", "selli", "yvain", "govin"];
+
+ var compare = ["motdepasse1","motdepasse2","motdepasse3","motdepasse4","motdepasse5","motdepasse6","motdepasse7","motdepasse8","motdepasse9",];
+
+login.addEventListener("keyup", tab);
+
+function tab(){
+
+
+/* for(nom in tableau){
+
+ if(login.value == tableau[nom]){
+
+ nome.classList.remove("none");
+
+
+} 
+
+} */
+
+
+for(var i=0; i<tableau.length;i){
+
+
+if(login.value == tableau[i]){
+      smlog.innerHTML = "login deja utilisé";
+     smlog.classList.add ("red");
+ /*     nome.classList.remove ("none");
+     nome.innerHTML = "bonjour "+tableau[i]; */
+      i=tableau[i];
+
+
+}else{
+    smlog.innerHTML ="";
+           nome.classList.add("none");
+           i++;
+}
+
+
+}
+
+}
+
+pass.addEventListener("blur",comparaison);
+
+function comparaison(){
+
+
+for(var x=0; x<compare;i){
+
+if(x==i){
+
+   nome.classList.remove ("none");
+     nome.innerHTML = "bonjour "+tableau[i];
+   i=comparaison.length;
+}else{
+
+   alert("pas bon");
+   i++;
+}
+
+
+
+
+}
+
+
+}
+
+
+   </script>
+</body>
+
+</html>

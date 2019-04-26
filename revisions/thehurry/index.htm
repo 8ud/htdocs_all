@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang='fr'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- Bootstrap CSS -->
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css' integrity='sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS' crossorigin='anonymous'>
+    <!-- Font Awesome CSS -->
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <!-- Google Fonts CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>The Hurry</title>
+</head>
+
+<body>
+    <div id="start"><button type="button">START</button></div>
+    <div id="story">
+        Il est bientôt 14h00 mais Sébastien n'a pas terminé ce qu'il a commencé !<br/>Donne-lui la force de finir dans les temps, sans quoi il risque d'arriver en retard au cours de Stéphane !<br/>Les portes de l'IFPA se fermeront-elles définitivement sur son avenir ?
+    </div>
+    <div id="countdown">GET READY</div>
+    <div id="timer" class='faster'><span id="hours">13</span>:<span id="minutes">59</span>:<span id="seconds">27</span></div>
+    <div id="score" class='faster' ><span>00</span></div>
+    <div id="textInput">
+        <input type="text" name="read" readonly/>
+        <input type="text" name="write" class='faster' autocomplete="off"/>
+    </div>
+    <div id="scSceneWrapper">
+        <div id="scScene" class='d-flex align-items-end'>
+            <div id='scAvatar' class='faster' ></div>
+            <div id='scBubble'>...</div>
+        </div>
+    </div>
+    <div id="spSceneWrapper">
+        <div id="spScene" class='d-flex flex-row-reverse align-items-end'>
+            <div id='spAvatar'></div>
+            <div id='spBubble'>...</div>
+        </div>
+    </div>
+    <div id="chair">
+        <div id="satMan">
+            <div id="scMiniSceneWrapper">
+                <div id="scMiniScene" class='d-flex align-items-end'>
+                    <div id='scMiniAvatar'></div>
+                    <div id='scMiniBubble'>...</div>
+                </div>
+            </div>
+        </div>
+        <div class="triangle"></div>
+    </div>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

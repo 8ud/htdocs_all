@@ -1,0 +1,20 @@
+{
+      "titre": "Kind of blue",
+      "genre": "Jazz",
+      "année": 1959,
+      "ventes (M)": 4.3,
+      "culte": true,
+      
+      "auteur" : {
+        "prenom": "Miles",
+        "nom": "Davis",
+        "naissance": 1926
+      },
+      
+      "musiciens": [
+        { "prenom": "Miles", "nom": "Davis"},
+        { "prenom": "John", "nom": "Coltrane"},
+        { "prenom": "Bill", "nom": "Evans"},
+        { "prenom": "Wynton", "nom": "Kelly"}
+      ]
+    }

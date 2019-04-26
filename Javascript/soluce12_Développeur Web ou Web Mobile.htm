@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var listeAll=["Arley","Caty","Arlyn","Chad","Cristobal","Briana","Barbie","Carla","Aubrey","Beitris","Archer","Briney","Anatole","Alidia","Aeriel","Claudette","Arther","Berta","Constanta","Carlo","Bobbie","Ambrosi","Baudoin","Adelind","Bent","Brynn","Bonnee","Ashly","Adella","Arda","Anthia","Akim","Conroy","Ashleigh","Batholomew","Carmencita","Caye","Clarine","Cristi","Ario","Belva","Consolata","Brigitte","Barbey","Abdel","Amberly","Craig","Bret","Averil","Chester","Alisander","Claudelle","Chaddie","Collin","Brocky","Clyde","Cassandre","Chase","Analiese","Cyndi","Bertina","Brok","Bernita","Bradan","Arabel","Carie","Cristin","Brion","Cletus","Cesar","Alvin","Artemus","Allix","Cloris","Alexio","Caryl","Bordy","Corby","Brandi","Corry","Brandise","Christian","Alberto","Ann-marie","Barret","Berty","Arleta","Anitra","Bella","Cyrillus","Ambrosius","Bathsheba","Barb","Briny","Cherise","Clemente","Aguste","Broddie","Constance","Borden","Constantin"];
+    var firstLetter="", tabA=[], tabB=[], tabC=[];
+    /**/
+    //répartition des prénoms dans les tableaux
+    for(var i=0;i<listeAll.length;i++){
+        firstLetter=listeAll[i].charAt(0);
+        switch(firstLetter){
+            case "A":tabA.push(listeAll[i]);break;
+            case "B":tabB.push(listeAll[i]);break;
+            default:tabC.push(listeAll[i]);break;
+        }
+    }
+
+    /*TRI DES TABLEAUX*/
+    tabA.sort();
+    tabB.sort();
+    tabC.sort();
+
+    /*Ajout de prénom */
+    ajoutPrenom("Stéphane", tabA);
+    ajoutPrenom("Alfreeeedo", tabA);
+    ajoutPrenom("Bob", tabC);
+    ajoutPrenom("Carlotttttta", tabC);
+
+    /* GENERATION DES LISTES DEROULANTES*/
+    // on écrit dans la page ce que renvoie la fonction
+
+        document.write(makeSelect("Prénoms en A",tabA));
+        document.write(makeSelect("Prénoms en B",tabB));
+        document.write(makeSelect("Prénoms en C",tabC));
+    
+    /*CONSTRUCTION DES SELECT*/
+
+    function makeSelect(nom, tablo){
+        // nom = nom du select + label
+        // tablo = tableau à exploiter
+        var select=""; // la future chaine
+
+        if(tablo.length>0){
+            // si le tableau contient des données
+            for(var i=0;i<tablo.length;i++){
+                // pour chaque élément du tableau
+                select+='<option value="'+tablo[i]+'">'+tablo[i]+'</option>';
+            }
+        }
+        return '<p><label>'+nom+'</label> <select name="'+nom+'">'+select+"</select></p>";
+
+    }
+
+    /*FONCTION d'ajout de prénom*/
+    // RAF : contrôle de lettre sans casse
+    // détermination du tableau en fonction de la 1ere lettre (si 26 tableaux)
+    
+        function ajoutPrenom(prenom, tablo){
+            if(prenom.length>=2 && typeof(prenom)==="string"){
+                // si le prénom fait plus de 2 caractères et est une chaine
+                if(tablo[0].charAt(0)==prenom.charAt(0) && tablo.length>=1){
+                    // si le tableau contient au moins 1 élément (est créé)
+                    // et que la 1ere lettre du prénom et celle du 1er élément sont les mêmes
+                    tablo.push(prenom);
+                    tablo.sort();
+                    //injection prénom et tri du tableau
+                }
+
+            }
+            return tablo; // dans tous les cas on renvoie le tablo, modifié ou pas.
+        }
+    </script>
+</body>
+</html>

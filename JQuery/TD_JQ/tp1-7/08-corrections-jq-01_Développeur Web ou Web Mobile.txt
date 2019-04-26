@@ -1,0 +1,450 @@
+$(document).ready(function(){
+
+
+////////// TP 1
+
+////////// Modifier le titre
+
+/******* décommenter debut	
+
+	$('.logo>h1').html('Stéphane<span> Pinard</span>');
+
+********/
+
+////////// Frenchisons l'interface
+
+/******* décommenter debut
+	var ls = "La suite";
+	var pi = "Plus d'info";
+	$('.button>a').text(ls);
+	$('input[type="button"].button').val(ls);
+	$('.side-bar>.search>.title>h2').text("RECHERCHER");
+	$('.recentPost a').text(pi);
+
+********/
+
+////////// Violet est le nouvel orange
+
+/******* décommenter debut
+
+	$('h3').addClass('textviolet');
+	$('.menu, .search').addClass('bgviolet');
+
+********/
+
+////////// Démochisons les images
+
+/******* décommenter debut
+
+	$('.content img').addClass('jolimg');
+
+********/
+
+////////// TP 2
+
+////////// J'suis pas trop sûr pour le violet
+
+/******* décommenter debut
+
+	$('.textviolet, .bgviolet').on('mouseover', function(){
+		// alert("le violet c'est beau !");
+	});
+
+********/
+
+////////// J'pourrais revoir la première paire ?
+////////// Etape 1
+
+/******* décommenter debut
+
+	$('.bgviolet').on('mouseover', function(){
+		$('.bgviolet').addClass('noviolet').removeClass('bgviolet');
+	});
+	$('body').on('mouseout', '.noviolet', function(){
+		$('.noviolet').addClass('bgviolet').removeClass('noviolet');
+	});
+
+********/
+
+////////// Etape 2
+
+/******* décommenter debut
+
+	$('.bgviolet, .textviolet').on('mouseover', function(){
+		$('.bgviolet').addClass('nobgviolet').removeClass('bgviolet');
+		$('.textviolet').addClass('notextviolet').removeClass('textviolet');
+
+	});
+	$('body').on('mouseout', '.nobgviolet, .notextviolet', function(){
+		$('.nobgviolet').addClass('bgviolet').removeClass('nobgviolet');
+		$('.notextviolet').addClass('textviolet').removeClass('notextviolet');
+	});
+
+********/
+
+////////// Identifier les images sélectionnées
+////////// Etape 1
+
+/******* décommenter debut
+
+	$('img.jolimg').on('click', function(){
+		$(this).toggleClass('item-select').toggleClass('jolimg');
+	});
+
+********/
+
+////////// Etape 2
+
+/******* décommenter debut
+
+	$('img.jolimg').on('click', function(){
+		if($(this).hasClass('item-select')){
+			alert("Vous allez le regretter !");
+		}
+		$(this).toggleClass('item-select').toggleClass('jolimg');
+	})
+
+********/
+
+////////// TP 3
+//////////  Surveillance globale
+////////// Etape 1
+
+/******* décommenter debut
+
+	$('img, a, .button').on('click', function(){
+		$(this).css({"border":"1px solid red", "color":"red"});
+		return false;
+	});
+
+********/
+
+////////// Etape 2
+
+/******* décommenter debut
+
+	 $('*').on('click', function(){
+	 	$(this).css({"border":"1px solid red", "color":"red"});
+	 	console.log("L'élément cliqué fait "+$(this).css("width")+" de large et "+$(this).css("height")+" de haut");
+	 	return false;
+	 });
+
+********/
+
+////////// Analyse des champs
+////////// Etape 1
+	
+/******* décommenter debut
+
+	$(':input').on('keyup', function(){
+		var tatapekwa = $(this).val();
+		console.log(tatapekwa);
+	});
+
+********/
+
+////////// Etape 2
+
+/******* décommenter debut
+
+	$(':input').on('keyup', function(){
+		var tatapekwa = $(this).val();
+		$('#formdest').html(tatapekwa);
+	});
+
+********/
+
+////////// Etape 3
+
+/******* décommenter debut
+
+	$('#name').on('change keyup', function(){
+		var tatapekwa = $(this).val();
+		if(tatapekwa=="admin"){
+
+			$('#formdest').html("Navré, "+tatapekwa+" est un nom réservé").addClass('error');
+		} else {
+			$('#formdest').html("").removeClass('error');
+		}
+	});
+
+********/
+
+////////// Etape 4 l'organe crée la fonction
+
+/******* décommenter debut
+
+	$('#name').on('change keyup', function(){
+		var tatapekwa = $(this).val();
+		validtp4(tatapekwa);
+			// Dé-commenter la function validtp4()
+	});
+
+********/
+
+
+////////// Etape 5 To infinity and beyond
+
+/******* décommenter debut
+
+	$('input[type="button"].button').on('click', function(){
+
+		validForm();
+	// Dé-commenter la function validForm()
+
+	});
+
+********/
+
+////////// TP4
+////////// Trouver le parent
+
+/******* décommenter debut
+
+	$('*').children().find('a').each(function(){
+		$(this).parent().css('border', '1px solid red');
+	})
+
+********/
+
+
+////////// Show must go on
+
+/******* décommenter debut
+
+	$('*').children('ul').parent().css('backgroundColor','gold');
+
+	$('.panel').each(function(){
+		$(this).children().eq(0).css('backgroundColor','lime');
+	});
+
+********/
+
+
+////////// TP 5
+////////// Mauvaise journée
+
+/******* décommenter debut
+
+	$('*').on('click', function(){
+		$(this).remove();
+		return false; // sinon c'est trop facile
+	})
+
+
+********/
+
+////////// Formulaire sous stéroides
+
+/******* décommenter debut
+
+	$('#newemail').on('click', function(){
+		$(this).after($('#email').parent().clone());
+	});
+
+********/
+
+////////// Formulaire reloaded
+  
+  // le bouton nouvel email porte id #newemail
+ 
+/******* décommenter debut
+
+	 $('#newemail').on('click', function(){               
+	 	// si click sur le bouton nouvel email
+
+		newline = $('#email').parent().clone().addClass('newemail');
+		// var newline = clone de la ligne Email + classe newemail
+
+
+		newline.find('input').removeAttr('id');
+		// retirer l'id du clone
+
+
+		$('#newemail').before(newline);
+		// insertion du clone au dessus du bouton Nouvelle adresse
+
+		$('.newemail:last span').text($('.newemail:last').text()+$('.newemail').length);
+		// modification du dernier champ inséré : son texte = son texte + nbr champs insérés
+
+	 });
+
+********/
+
+////////// Formulaire sous stéroïdes Revolutions
+	// ajouter la classe CSS 
+	// label {	position:relative}
+	//.del {position:absolute;cursor:pointer;top:0;right:-10px;width:20px; height:20px; border-radius:50%; display:flex;justify-content:center; align-items:center;background-color:#d22; color:white;}
+	// .del::after{content:"x";}
+
+/******* décommenter debut
+
+	 $('#newemail').on('click', function(){               
+	 	// si click sur le bouton nouvel email
+
+		newline = $('#email').parent().clone().addClass('newemail');
+		// var newline = clone de la ligne Email + classe newemail
+
+
+		newline.find('input').removeAttr('id');
+		// retirer l'id du clone
+
+
+		$('#newemail').before(newline);
+		// insertion du clone au dessus du bouton Nouvelle adresse
+
+		$('.newemail:last span').text($('.newemail:last').text()+$('.newemail').length);
+		// modification du dernier champ inséré : son texte = son texte + nbr champs insérés
+
+		$('.newemail:last').append('<div class="del"></div>');
+		// insertion du bouton delete
+	 });
+
+// traitement des boutons delete : on traite le père (form) car les .del apparaissent APRES le chargement de la page
+	 	$('form').on("click", ".del", function(){
+	 		$(this).parent().remove();
+	 		renumerotation()
+	 	});
+
+
+********/
+
+////////// TP 6
+////////// Echauffement
+
+	// REPRENDRE LA FONCTION DU TP 5 *Formulaire sous stéroïdes Revolutions*, 
+	// REMPLACER LE TRAITEMENT DU DELETE PAR CE CODE :
+
+/******* décommenter debut
+
+ 	$('form').on("click", ".del", function(){
+ 		$(this).parent().slideUp(1000, function(){
+ 			$(this).remove()
+ 		});
+ 		renumerotation()
+ 	});
+
+********/
+
+////////// Echauffement 2
+
+/******* décommenter debut
+
+	$('*').on("click", function(){
+		$(this).parent().find('img').each(function(){
+
+			$(this).slideToggle();
+		});
+		return false;
+	});
+
+********/
+
+
+////////// Echauffement 3
+
+/******* décommenter debut
+
+	$('img.jolimg').hide().slideDown(2000);
+
+********/
+
+
+////////// TP 7 JE SLIDE PARCE QUE C'EST SWAG
+////////// Retour vers le...menu
+
+/******* décommenter debut
+
+	// Faire apparaître / disparaître le bloc à cliquer
+		$(window).scroll(function(){
+			if($(this).scrollTop() > 300) {
+				$('#scrollup').slideDown('slow');
+			} else {
+				$('#scrollup').slideUp('slow');
+			}
+		});
+
+	// Action lorsque le bloc à cliquer est cliqué
+		$('#scrollup').on('click', function(){
+			$('html, body').animate({scrollTop:0}, 1000);
+		});
+
+********/
+
+////////// Tu m'vois ? Tum'vois plus !
+
+/******* décommenter debut
+
+	$('#slider-handle').on('click', function(){
+		var leftPos = $('#slider-main').css('left');
+		console.log(leftPos);
+		if(leftPos == '-250px') {
+			$('#slider-main').animate({left:'0'},300);
+			$('#slider-handle').addClass('open');// ch'uis un z'héro
+		} else {
+			$('#slider-main').animate({left:'-250px'},600);
+			$('#slider-handle').removeClass('open');// ch'uis un z'héro
+		}
+	});
+
+********/
+
+
+}); /*Fin document.ready*/
+
+
+
+/////////////FONCTIONS EXTERNES A JQUERY DOCUMENT.READY
+
+
+/*Etape 4 l'organe crée la fonction*/
+
+function validtp4(loginEntre){
+
+if(loginEntre=="admin"){
+
+			$('#formdest').html("Navré, "+loginEntre+" est un nom réservé").addClass('error');
+		} else {
+			$('#formdest').empty().removeClass('error');
+		}
+}
+
+
+/*To infinity and beyond*/
+
+
+function validForm(){
+	var erreur = 0;
+	$(':input').each(function(){
+		var v=$(this).val();
+		if(v==""){
+			erreur++;
+			$(this).addClass('error');
+		} else {
+			$(this).removeClass('error');
+		}
+
+	});
+
+	if(erreur==0){
+		$('#formdest').empty().removeClass('error');
+		alert("Votre message a bien été transmis");
+	} else {
+		$('#formdest').text("Veuillez corriger les champs indiqués").addClass('error');
+	}
+}
+
+/* Formulaire sous stéroides : revolutions */
+
+function renumerotation(){
+	
+	var libelle = $('#email').parent().find('span').text();
+	// on récupère le libellé original (Email)
+
+	var num=1;
+	$('.newemail').each(function(){
+		// a chaque nouvel email, on injecte le libellé, plus un nombre qu'on augmente
+		$(this).find('span').text(libelle+" "+num);
+		num++;
+	});
+}

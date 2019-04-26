@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <title>NINA - Theme HTML gratuit</title>
+   <link rel="stylesheet" href="assets/reset.css" type="text/css">
+   <link rel="stylesheet" href="assets/styl.css" type="text/css">
+   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700&subset=latin,latin-ext' rel='stylesheet'
+      type='text/css'>
+ </head>
+
+<body>
+   <div id="couverture">
+      <div id="popup">
+         <div id="close"></div>
+         <div id="popup_contenu"></div>
+      </div>
+   </div>
+   <!-- *********  Header  ********** -->
+   <div id="header">
+      <div id="header_in">
+         <h1><a href="index.htm"><b>THEME</b> NINA</a></h1>
+         <div id="menu">
+            <ul>
+               <li><a href="index.html" class="">Accueil</a></li>
+               <li><a href="apropos.html" class="">A propos</a></li>
+               <li><a href="implantations.html" class="">Implantations</a></li>
+               <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+   <!-- *********  Header  ********** -->
+   <!-- *********  Main part – headline ********** -->
+   <div id="bloc_principal_inner">
+      <div id="bloc_principal_inner_in">
+         <h2>Contactez-nous</h2>
+         <div class="bouton_principal">
+            <a href="#" class="bouton_sombre">TELECHARGER</a>
+         </div>
+      </div>
+   </div>
+   <!-- *********  contenu  ********** -->
+   <div id="contenu_inner">
+      <!-- *** contact form *** -->
+      <h3>Lâchez-nous un message</h3>
+      <form class="formit" method="GET" action="http://www.pleione.fr/validform">
+         <div class="formline">
+            <input class="obligatoire ko"  id="nom"type="text" data-longmini="4" name="nom" placeholder="VOTRE NOM" />
+            <span class="valid"><img id="im1" src="assets/img/ko.png"></span>
+         </div>
+         <div class="formline">
+            <input class="obligatoire ko" id="prenom" type="text" data-longmini="3" name="prenom" placeholder="VOTRE PRENOM" />
+            <span class="valid"><img id="im2" src="assets/img/ko.png"></span>
+         </div>
+         <div class="formline">
+            <input class="obligatoire ko" id="ville" type="text" data-longmini="3" name="ville" placeholder="VOTRE VILLE" />
+            <span class="valid"><img id="im3" src="assets/img/ko.png"></span>
+         </div>
+         <div class="formline">
+            <input class="obligatoire ko" id="mail" type="text" data-longmini="5" name="email" placeholder="EMAIL" />
+            <span class="valid"><img id="im4" src="assets/img/ko.png"></span>
+         </div>
+         <input type="text" data-longmini="0" name="url" placeholder="SITE WEB (OPTIONNEL)" /><br />
+         <textarea name="message" placeholder="Votre message ici..."></textarea>
+         <input type="submit" class="button_submit" id="submitBTN" disabled value="ENVOYER UN MESSAGE">
+      </form>
+      <div class="cara"></div>
+      <h3>Informations de contact</h3>
+      <div class="contactinfo">
+         <span class="ico_mapmark"><b>70 rue Machinchoz, 12345, El Qseir</b></span>
+      </div>
+      <div class="contactinfo">
+         <span class="ico_message"><b>cats@ninatheme.com</b></span>
+      </div>
+      <div class="contactinfo">
+         <span class="ico_iphone"><b>(+123) 456 789 012</b></span>
+      </div>
+      <hr class="nettoyage">
+      <div class="mapit">
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4928.621665375981!2d34.38509101617685!3d25.94015925687677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x144cc4f91a00db3b%3A0x1bfdc2ef5f06b3ca!2sEl+Qousseir%2C+Qesm+Al+Qoseir%2C+Mer+Rouge%2C+%C3%89gypte!5e1!3m2!1sfr!2sfr!4v1489311290444"
+            width="938" height="360" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+      </div>
+   </div>
+   <!-- *********  Footer  ********** -->
+   <hr class="nettoyage">
+   <div id="footer">
+      <div id="footer_in">
+         <p class="btn" id="cgu"> C.G.U.</p>
+         <p class="btn" id="cpy"> Copyright</p>
+         <p><a href="#">ECF JS/JQUERY</a> &mdash; autorisé pour utilisation commerciale et personnelle</p>
+         <span>Auteur: <a href="#">Vilém Ries</a></span>
+      </div>
+   </div>
+   <!-- JQuery -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+   <!-- Script Externes -->
+   <script src="script.js"> </script>
+   <script>
+       ///ICI MES SCRIPTS INTERNES
+   </script>
+</body>
+
+</html>

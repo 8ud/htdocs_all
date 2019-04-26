@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+  <title>�criture d'une fonction renvoyant une valeur</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+</head>
+<body>
+
+<h1>�criture d'une fonction complexe</h1>
+
+<p>Cliquez sur le bouton pour lancer la fonction&nbsp;: <button onclick="" id="bt">Lancer la fonction</button></p>
+
+  <script type="text/javascript">
+
+
+var button = document.getElementById("bt");
+
+button.addEventListener("click",cercle);
+
+function cercle(){
+var rayon=prompt("rentrez le rayon d'un cercle :");
+rayon=parseInt(rayon);
+var surf= rayon*rayon*3.14;
+
+return surf;
+};
+
+alert(surf);
+
+  </script>
+</body>
+</html>

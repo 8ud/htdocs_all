@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+var primitive = "valeur primitive";
+var maVoiture = {
+    couleur: "grise",
+    annee: 2010,
+    marque: "opel",
+    modele: "corsa",
+
+    details: function () {
+        return "marque : " + this.marque +
+            "\nmodele : " + this.modele +
+            "\ncouleur : " + this.couleur +
+            "\nde : " + this.annee
+    }
+}
+// objet créé. Lancer la méthode details() de l'objet
+console.log(maVoiture.details());
+// en mode console, afficher maVoiture
+    </script>
+</body>
+
+</html>

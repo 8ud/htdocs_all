@@ -1,0 +1,11 @@
+
+body {
+	background-color:#000;
+}
+
+#theartist
+{ /*on ne touche pas à celle-là*/
+	top: 200px;
+	left: 20px;
+}
+

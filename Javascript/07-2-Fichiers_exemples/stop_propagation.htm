@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div  id="papa" style="padding:100px; background-color:steelblue; color:white">
+    <div id="fiston"  style="padding:100px; background-color:lightsteelblue;">fiston</div>
+</div>
+
+
+<script>
+var papa = document.querySelector('#papa');
+papa.addEventListener('click', message);
+
+var fiston = document.querySelector('#fiston');
+fiston.addEventListener('click', message);
+
+function message(e) {
+    //e.stopPropagation();
+    alert(e.type+ " sur "+ this.id);
+}
+</script>
+</body>
+</html>

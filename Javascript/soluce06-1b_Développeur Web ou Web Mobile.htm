@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+
+
+/*Exo 6-1b : Créer un programme qui demande à l'utilisateur d'entrer des nombres à l'aide de prompt("Entrez un nombre); et affiche leur somme lorsqu'on rentre 0 ou autre chose qu'un nombre.*/
+
+//EXO 6-1b
+
+// déclaration des variables
+var nbAjout, nbTotal=0;
+
+while( nbAjout !=0 ){
+
+   nbAjout = prompt('Entrez un nombre (0 pour stop)');
+   nbTotal +=parseInt(nbAjout);
+}
+
+document.write('Le total des nombres entrés est de '+nbTotal);
+
+
+    </script>
+</body>
+</html>

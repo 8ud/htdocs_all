@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+   <meta charset="UTF-8">
+   <title>Démo Ajax</title>
+   <meta name="author" content="Fano Pinard">
+   <meta name="description" content="Démo Ajax">
+   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, shrink-to-fit=no">
+   <!-- Compatibilité IE -->
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- HTML5 shim pour IE 6-8 -->
+   <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+
+   <!-- Font Awesome -->
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+      crossorigin="anonymous">
+   <!-- GoogleFonts -->
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous">
+   <!-- CSS Perso -->
+   <link rel="stylesheet" href="style.css">
+   <style>
+      /* Styles internes */
+      body {
+         background-color: #ccc;
+      }
+      main {
+         background-color: white;
+         padding:30px 15px;
+      }
+    label {
+       width:100px;
+       text-align: right;
+       padding-right:15px
+    }
+    .searchline{
+       margin-bottom:15px;
+    }
+    .bloc {
+       border-radius:7px;
+       padding:10px;
+       background-color: #ddd;
+       width:100%;
+       align-items:center;
+    }
+    .searchline input{
+       flex:1;
+       padding:10px 15px;
+       border-radius:5px;
+       border:0;
+       outline:none;
+    }
+    #resultats {
+       padding:30px;
+       background-color: rgb(218, 240, 238);
+    }
+   
+    table {
+       width:80%;
+       border: 2px solid #607D8B;
+       border-collapse: collapse;
+       margin:0 auto;
+    }
+    tr:nth-child(odd){
+      background-color: #c6cdff;
+    }
+    </style>
+</head>
+
+<body>
+   <!-- debut page -->
+
+   <main class="container">
+      <div class="row">
+         <header class="col-12">
+            <h2 class="text-center">Démo ajax : mes films</h2>
+         </header>
+         <article class="col-12">
+            <h4>Rechercher</h4>
+            <div class="row" id="search">
+
+               <div class="searchline d-flex col-4 col-4">
+                  <div class="bloc d-flex">
+                     <label for="titre">Titre</label>
+                     <input type="text" name="titre" id="titre" placeholder="Recherche par titre">
+                  </div>
+               </div>
+               <div class="searchline d-flex col-4">
+                  <div class="bloc  d-flex">
+                     <label for="realisateur">Réalisateur</label>
+                     <input type="text" name="realisateur" id="realisateur" placeholder="Recherche par réalisateur">
+                  </div>
+               </div>
+               <div class="searchline d-flex col-4">
+                  <div class="bloc  d-flex">
+                     <label for="genre">Genre</label>
+                     <input type="text" name="genre" id="genre" placeholder="Recherche par genre">
+                  </div>
+               </div>
+            </div>
+
+
+         </article>
+         <div class="col-12">
+            <div class="bloc" id="resultats">
+               <h3 class="text-center">Résultats</h3>
+               <div id="listresult" class="text-center">Renseignez les champs de recherche</div>
+            </div>
+         </div>
+      </div>
+      <ul>
+         <li>La page request.php répond aux requêtes dans la table films</li>
+         <li>Elle prend en paramètre le nom du champ et sa valeur</li>
+         <li>par exemple : request.php?titre=austerlitz</li>
+         <li>Elle n'accepte en paramètre qu'un seul des champs titre, realisateur ou genre</li>
+      </ul>
+      <ul>
+         <li>
+            La page renvoie les résultats sous la forme :
+            <ul>
+               <li>titre;genre;realisateur;année</li>
+               <li>Les valeurs d'une même réponse sont séparées par des ;</li>
+            </ul>
+               <li>Les réponses sont séparées par  : | (symbole pipe, Alt-Gr+6)</li>
+         </li>
+      </ul>
+      <ul>
+         <li>Faites en sorte d'afficher les résultats sous forme de tableau HTML</li>
+      </ul>
+   </main>
+
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <!-- ////// $.get NE FONCTIONNE PAS AVEC LA LIBRAIRIE PAR DEFAUT BOOTSTRAP //// -->
+   <!-- PRENDRE CELLE DE GOOGLE -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"></script>
+      <script src="script.js"></script>
+
+   <script>
+     // afficher les résultats sous forme de tableaux HTML...
+     // pour voir un exemple de résultats, utiliser l'adresse :
+     //   request.php?realisateur=chaba
+     /*
+      // le résultat ressemble à cela :
+         Asterix et Obelix, mission Cleopatre;Comedie;Alain Chabat;2002|Rrrrrr;Comedie;Alain Chabat;2004|    
+         */
+   </script>
+
+
+</body>
+
+</html>

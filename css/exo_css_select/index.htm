@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+   <meta charset="UTF-8">
+   <title>Sélecteurs CSS</title>
+   <meta name="author" content="Fano Pinard">
+   <meta name="description" content="Bossons le CSS">
+   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, shrink-to-fit=no">
+   <!-- Compatibilité IE -->
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- HTML5 shim pour IE 6-8 -->
+   <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+   <!-- Font Awesome -->
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+      crossorigin="anonymous">
+   <!-- GoogleFonts -->
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+   <!-- CSS Perso -->
+   <link rel="stylesheet" href="complex_select.css">
+   <style>
+      /* Styles internes */
+    </style>
+</head>
+
+<body>
+   <!-- debut page -->
+
+   <main class="flex justif-between">
+      <div id="col" class="flex column flex4">
+         <input type="text" id="mySelect" tabindex="1" placeholder="Tapez un sélecteur CSS">
+         <div class="flex">
+            <input id="cancel" tabindex="3" type="button" value="Reset" class="flex1">
+            <input id="valid" tabindex="2" type="button" value="Sélectionner" class="flex3">
+      </div>
+        
+         <p>
+            <ol style="font-size:14px"> <caption><strong>Eléments à rechercher</strong></caption>
+                  <li>Tous les éléments</li>
+                  <li>L'id monID</li>
+                  <li>Le HR dans l'id monID</li>
+                  <li>Le HR qui suit immédiatement l'id monID</li>
+                  <li>Le second HR qui suit immédiatement l'id monID</li>
+                  <li>Les <code>, celui qui est dans le paragraphe</li>
+                  <li>Les cellules du tableau</li>
+                  <li>La rangée de la table de 7</li>
+                  <li>La colonne de la table de 8</li>
+                  <li>Tous les 6emes enfants</li>
+                  <li>Les images ET les paragraphes</li>
+                  <li>Les div, les paragraphes et les images</li>
+                  <li>La ligne de table de multiplication qui dit 25</li>
+                  <li>2 cellules de tableau (y en 3) qui disent 24</li>
+                  <li>Chaque dernier enfant de son père</li>
+                  <li>La div portant la classe flex</li>
+                  <li>Tous les éléments portant la classe frere</li>
+                  <li>Les paragraphes de classe frere</li>
+                  <li>Les éléments de classe frere et ceux de classe soeur</li>
+                  <li>Les éléments portant les 2 classes "bob" et "bul"</li>
+                  <li>Un paragraphe de classe soeur suivant un paragraphe de classe frere</li>
+                  <li>Les images qui ont un attribut alt</li>
+                  <li>Les images qui ont un attribut vide</li>
+                  <li>La dernière image enfant d'une div de classe flex</li>
+                  <li>Les li pairs</li>
+                  <li>Les li qui ont un attribut target</li>
+                  <li>Les li qui ont un attribut target="blank"</li>
+                  <li>Le 3eme li</li>
+                  <li>Les li multiples de 3 (3,6,9...)</li>
+                  <li>Les liens enfants directs des li impairs</li>
+                  <li>Les liens des éléments 4-1 à 4-3</li>
+                  <li>Les input texte</li>
+                  <li>Les éléments de formulaire obligatoires</li>
+                  <li>Les éléments avec un attribut placeholder</li>
+                  <li>Les éléments cochés</li>
+                  <li>Les cases à cocher</li>
+                  <li>Les cases à cocher sélectionnées</li>
+                  <li>Le 4eme choix de la liste déroulante</li>
+            </ol>
+         </p>
+         <div style="height:500px"></div>
+         <span id="iknow"></span>
+         I DO know the title sucks !
+         <div style="height:500px"></div>
+      </div>
+      <article class="flex10">
+            <h1>Exerçons notre sagacité aux sélecteur CSS <a href="#iknow" style="font-size:10px;text-decoration:none">*</a></h1>
+         <div id="monID" class="bob bul">
+            Cette phrase est dans un élément portant l'id <em class="bob bul">monID</em>. Elle contient une ligne horizontale.
+            <hr>
+            Et il y a deux autres lignes horizontales, juste après <em>MonID</em>
+
+         </div>
+         <hr>
+         <hr>
+         Ce &lt;code&gt; <code>lorem ipsum</code>&lt;/code&gt; se balade n'importe où<br>
+         <p class="frere">
+            Ce texte est <span class="bob bul">inclus dans un</span> paragraphe.<br>
+            Il contient un morceau de &lt;code&gt; <code>lorem ipsum</code>&lt;/code&gt;
+         </p>
+
+         <p> cette ligne ne sert absolument à rien</p>
+         <p class="soeur"> cette ligne ne sert absolument à rien non plus</p>
+         Ces images sont dans une div portant la classe "imgline"<br>
+         <div class="flex justif-between imgline" style="border:2px solid #999">
+            <img src="https://dummyimage.com/200x100/ded/676">
+            <img src="https://dummyimage.com/200x100/ded/676" alt="coucou">
+            <img src="https://dummyimage.com/200x100/ded/676" alt="">
+            <img src="https://dummyimage.com/200x100/ded/676" alt="coucou" style="border:2px solid steelblue">
+         </div>
+
+         <br>
+         <div class="flex justif-between align-start">
+            <img src="https://dummyimage.com/200x100/ded/676">
+
+            <img src="https://dummyimage.com/200x100/ded/676" alt="coucou">
+            <div>
+               <ul>
+                  <li><a href="#">lien 1</a></li>
+                  <li><a href="#">lien 2</a></li>
+                  <li><a href="#" target="pouet">lien 3</a></li>
+                  <li><a href="#">lien 4</a>
+                     <ul>
+                        <li><a href="#">lien 4-1</a></li>
+                        <li><a href="#" target="blank">lien 4-2</a></li>
+                        <li><a href="#">lien 4-3</a></li>
+                     </ul>
+                  </li>
+                  <li><a href="#" target="blank">lien 5</a></li>
+                  <li><a href="#">lien 6</a></li>
+               </ul>
+            </div>
+            <img src="https://dummyimage.com/200x200/ded/676" alt="">
+
+         </div>
+         <br>
+         <div class="flex">
+            <table>
+               <tr>
+                  <td>&nbsp;</th>
+                     </th>
+                  <td>1</th>
+                  <td>2</th>
+                  <td>3</th>
+                  <td>4</th>
+                  <td>5</th>
+                  <td>6</th>
+                  <td>7</th>
+                  <td>8</th>
+                  <td>9</th>
+                  <td>10</th>
+               </tr>
+               <tr>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>6</td>
+                  <td>7</td>
+                  <td>8</td>
+                  <td>9</td>
+                  <td>10</td>
+               </tr>
+               <tr>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>4</td>
+                  <td>6</td>
+                  <td>8</td>
+                  <td>10</td>
+                  <td>12</td>
+                  <td class="frere">14</td>
+                  <td>16</td>
+                  <td>18</td>
+                  <td>20</td>
+               </tr>
+               <tr>
+                  <td class="bob bul">3</td>
+                  <td>3</td>
+                  <td>6</td>
+                  <td>9</td>
+                  <td>12</td>
+                  <td class="frere">15</td>
+                  <td>18</td>
+                  <td>21</td>
+                  <td>24</td>
+                  <td>27</td>
+                  <td>30</td>
+               </tr>
+               <tr>
+                  <td>4</td>
+                  <td>4</td>
+                  <td>8</td>
+                  <td>12</td>
+                  <td class="frere">16</td>
+                  <td>20</td>
+                  <td>24</td>
+                  <td>28</td>
+                  <td>32</td>
+                  <td>36</td>
+                  <td>40</td>
+               </tr>
+               <tr>
+                  <td>5</td>
+                  <td>5</td>
+                  <td>10</td>
+                  <td>15</td>
+                  <td>20</td>
+                  <td>25</td>
+                  <td>30</td>
+                  <td>35</td>
+                  <td>40</td>
+                  <td class="bob bul">45</td>
+                  <td>50</td>
+               </tr>
+               <tr>
+                  <td>6</td>
+                  <td>6</td>
+                  <td>12</td>
+                  <td>18</td>
+                  <td>24</td>
+                  <td>30</td>
+                  <td>36</td>
+                  <td>42</td>
+                  <td>48</td>
+                  <td>54</td>
+                  <td>60</td>
+               </tr>
+               <tr>
+                  <td>7</td>
+                  <td>7</td>
+                  <td>14</td>
+                  <td>21</td>
+                  <td>28</td>
+                  <td>35</td>
+                  <td>42</td>
+                  <td>49</td>
+                  <td>56</td>
+                  <td>63</td>
+                  <td>70</td>
+               </tr>
+               <tr>
+                  <td>8</td>
+                  <td>8</td>
+                  <td>16</td>
+                  <td>24</td>
+                  <td>32</td>
+                  <td>40</td>
+                  <td>48</td>
+                  <td>56</td>
+                  <td>64</td>
+                  <td>72</td>
+                  <td>80</td>
+               </tr>
+               <tr>
+                  <td>9</td>
+                  <td>9</td>
+                  <td>18</td>
+                  <td>27</td>
+                  <td>36</td>
+                  <td>45</td>
+                  <td>54</td>
+                  <td>63</td>
+                  <td>72</td>
+                  <td>81</td>
+                  <td>90</td>
+               </tr>
+               <tr>
+                  <td>10</td>
+                  <td>10</td>
+                  <td>20</td>
+                  <td>30</td>
+                  <td>40</td>
+                  <td>50</td>
+                  <td>60</td>
+                  <td>70</td>
+                  <td>80</td>
+                  <td>90</td>
+                  <td>100</td>
+               </tr>
+            </table>
+            <div style="margin-left:15px">
+               <form action="traitement">
+                  <div class="flex column">
+                     <div class="flex">
+                        <input type="text" value="texte1" required>
+                        <input type="text" value="texte2" class="bob bul">
+                        <input type="text" value="" placeholder="texte3">
+                     </div>
+                     <textarea name="" id="" placeholder="Votre texte" style="width:100%;height:75px"></textarea>
+                        <div class="flex">
+                        <div  style="width:30%">
+                           <input type="radio" name="r" value="1" checked> Un<br>
+                           <input type="radio" name="r" value="2"> Deux<br>
+                           <span class="frere"><input type="radio" name="r" value="3"> Trois<br></span>
+                           <input type="radio" name="r" value="4"> Quatre<br>
+                           <input type="radio" name="r" value="5" > Cinq<br>
+                           <input type="radio" name="r" value="6" disabled> Six<br>
+                           <input type="radio" name="r" value="7" disabled> Sept<br>
+                          
+                        </div>
+                        <div style="width:30%">
+                              <input type="checkbox" value="a" checked> Alpha<br>
+                              <span class="frere"><input type="checkbox" value="b"> Bravo<br></span>
+                              <input type="checkbox" value="c"> Charly<br>
+                              <input type="checkbox" value="d" checked> Delta<br>
+                              <input type="checkbox" value="d" checked> Echo
+                        </div>
+                        <div class="flex" style="width:30%">
+                           <select name="sel" id="" size="5">
+                             <option value="1">Element 1</option>
+                             <option value="2" selected>Element 2</option>
+                             <option value="3">Element 3</option>
+                             <option value="4">Element 4</option>
+                             <option value="5" class="bob bul">Element 5</option>
+                             <option value="6">Element 6</option>
+                             <option value="7">Element 7</option>
+                             <option value="8">Element 8</option>
+                           </select>
+                        </div>
+                     </div>
+                  </div>
+               </form>
+            </div>
+
+         </div>
+      </article>
+   </main>
+
+   <!-- fin page -->
+   <!-- JQuery -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <!-- Script Externes -->
+
+   <script>
+      $(function () {
+         $("#valid").on('click', function () {
+            
+            if($('#mySelect').val()!=""){
+               $('article ' + $('#mySelect').val()).toggleClass("sel");
+              }
+           
+         });
+         $("#cancel").on('click', function () {
+            
+           $('*').removeClass("sel");
+            });
+           
+ 
+
+
+
+      }); /* JQ*/
+   </script>
+</body>
+
+</html>

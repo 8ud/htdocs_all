@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    regardez en console (F12)
+    <script>
+  
+	var prix = 100, tva=1.2, totTVA, reduc=5, total, pHT, pTTC, quantite = 3;
+	// idéalement on déclarera la tva à 1.2 pour faire prixHT*1.2 = prixTTC
+    pHT = prix * quantite;
+    pTTC = pHT * tva;
+    totTVA = pTTC-pHT; 
+    total = pTTC - reduc ;
+    console.log(
+    "Prix : "+prix+
+    " | Qté : "+quantite+
+    " | Total HT : "+pHT+
+    "|\nTVA 20% : "+totTVA+
+    " | Total TTC : "+pTTC+
+    "|\nRéduc : "+reduc+
+    " | A régler : "+total+" |");
+	   
+    </script>
+</body>
+</html>

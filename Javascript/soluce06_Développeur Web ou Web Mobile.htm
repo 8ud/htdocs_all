@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // on essaye de prendre en compte 
+        // TOUS les cas de figure, surtout ceux qui sortent du cadre
+    var jour=2;
+    if(jour==1){nomj='lundi';}
+    else if(jour==2){nomj='mardi';}
+    else if(jour==3){nomj='mercredi';}
+    else if(jour==4){nomj='jeudi';}
+    else if(jour==5){nomj='vendred';}
+    else if(jour==6){nomj='samedi';}
+    else if(jour==7){nomj='dimanche';}
+    else {nomj="inconnu";}
+    alert('Le jour n°'+jour+" est le "+nomj);
+
+    switch(jour){
+        case 1 : nomj='lundi';break;
+        case 2: nomj='mardi';break;
+        case 3: nomj='mercredi';break;
+        case 4: nomj='jeudi';break;
+        case 5: nomj='vendred';break;
+        case 6: nomj='samedi';break;
+        case 7: nomj='dimanche';break;
+        default: nomj='inconnu';
+    }
+    alert('Le jour n°'+jour+" est le "+nomj);
+    </script>
+</body>
+</html>

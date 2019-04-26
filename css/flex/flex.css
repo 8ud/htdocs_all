@@ -1,0 +1,108 @@
+/* ****** NE PAS MODIFIER CE BLOC (Voir plus bas) *****/
+*{  box-sizing:border-box;  font-family: 'Merriweather', serif;}
+.wrap {  max-width:1600px;  width:70vw;  
+  margin:auto;  background-color:#ddd; padding:15px;border-radius:10px}
+body {background-color:#444}
+.box { padding:20px;}
+.box:nth-of-type(10n+1){background:linear-gradient(-90deg,#c22631,#9b1e27 )}
+.box:nth-of-type(10n+2){background:linear-gradient(#eb7e17, #bc6512)}
+.box:nth-of-type(10n+3){background:linear-gradient(#f7c21c,#c69b16)}
+.box:nth-of-type(10n+4){background:linear-gradient(#dbe338, #afb62d)}
+.box:nth-of-type(10n+5){background:linear-gradient(#61c062, #4e9a4e)}
+.box:nth-of-type(10n+6){background:linear-gradient(#4d88e2, #3e6db5)}
+.box:nth-of-type(10n+7){background:linear-gradient(#5750eb, #4644bc)}
+.box:nth-of-type(10n+8){background:linear-gradient(#6526ab, #511e89)}
+.box:nth-of-type(10n+9){background:linear-gradient(#6e0981, #580767)}
+.box:nth-of-type(10n){background:linear-gradient(#dc2e99, #b0257a)}
+.box:nth-of-type(10n+1) .num:after{content:"1"}
+.box:nth-of-type(10n+2) .num:after{content:"2"}
+.box:nth-of-type(10n+3) .num:after{content:"3"}
+.box:nth-of-type(10n+4) .num:after{content:"4"}
+.box:nth-of-type(10n+5) .num:after{content:"5"}
+.box:nth-of-type(10n+6) .num:after{content:"6"}
+.box:nth-of-type(10n+7) .num:after{content:"7"}
+.box:nth-of-type(10n+8) .num:after{content:"8"}
+.box:nth-of-type(10n+9) .num:after{content:"9"}
+.box:nth-of-type(10n) .num:after{content:"10"}
+ .num {  /*background-color:rgba(255,255,255,0.5);  display:block;  width:15px;  height:15px;  text-align:center;  line-height:12px;border-radius:50%;  margin:auto;  border:1px solid white;*/  color:#eee;  font-weight:bold;  font-size:1.4em;   text-shadow:1px 1px 5px #111, 0 0 7px #444} 
+/* .num{box-shadow:0 3px 25px rgba(50,50,50,0.5),0 2px 5px rgba(50,50,50,0.9);} */
+
+/* ****** NE RIEN EDITER AU DESSUS DE CETTE LIGNE *****/
+/* ************** EDITER A PARTIR D'ICI ***************/
+/* masque les numéros*/ 
+/*  .num{  display:none}  */
+
+/*Chaque boite à une classe b+son numéro : la 1ere box a .b1, le seconde .b2*/
+.wrap{
+  display:flex;
+   flex-wrap:wrap ;      
+  flex-direction:row;
+    justify-content:center;
+  align-items:center;
+  width:90%
+}
+
+
+
+
+.box{
+ margin:1em;
+  width:200px;
+  height:100px;
+  
+}
+
+.l50{
+  flex:1 1 calc(50% - 2em)
+}
+
+.l33{
+  flex:1 1 calc(33.3333% - 2em)
+}
+
+.l66{
+  flex:1 1 calc(66.6666% - 2em)
+}
+
+.l25{ 
+flex:1 1 calc(25% - 2em)
+}
+
+.l100{
+  flex:1 1 calc(100% - 2em)
+}
+
+@media screen and (min-width: 800px) and (max-width: 1200px) {
+  
+  .l33 {
+    flex:1 1 calc(50% - 2em);
+      }
+  .l25{
+    flex:1 1 calc(50% - 2em);
+  }
+  .cache { display:none;}
+  
+}
+
+@media screen and (max-width: 800px) {
+  
+  .wrap{
+        /*flex-direction:column;*/
+  }
+.box {
+    flex:1 1 calc(100% - 2em);
+   
+  }
+  
+  .l25{ display:none;
+      }
+  
+}
+
+
+
+
+
+.b1{
+  
+}

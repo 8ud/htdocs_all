@@ -1,0 +1,123 @@
+.papa {
+
+   display: flex;
+   max-width: 1400px;
+   width: 80%;
+   min-height: 800px;
+   background-color: rgb(194, 81, 81);
+   margin: 0 auto;
+}
+
+.col {
+   background-color: rgb(124, 20, 20);
+   flex: 0 0 20%;
+
+
+}
+
+.page {
+
+   background-color: rgb(226, 15, 15);
+   flex: 1;
+}
+
+.lien {
+
+   background-color: #fff;
+   margin: 30px;
+   padding: 15px;
+
+}
+
+.menu {
+   background-color: rgb(226, 122, 122);
+   display: flex;
+
+
+}
+
+.trois {
+   background-color: rgb(90, 19, 7);
+   min-width: 200px;
+   min-height: 200px;
+   width: calc((100% - 60px) / 3);
+   margin-top: 30px;
+
+
+}
+
+.papatrois {
+
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+
+}
+
+.quatre {
+
+   background-color: rgb(155, 78, 78);
+   /* min-width: 50px; */
+   min-height: 150px;
+   width: calc((100%-90px) / 4);
+   margin-top: 30px;
+   margin-left: 30px;
+
+}
+
+.papaquatre {
+
+   display: flex;
+   flex-wrap: wrap;
+   /* justify-content: space-between; */
+/* align-content:space-between; */
+}
+
+@media screen and (min-width:800px) and (max-width:1400px) {
+.papaquatre{
+display: flex;
+flex-wrap: wrap;
+
+}
+   .col {
+      display: none;
+   }
+
+   .trois {
+      flex: 1 1 45%;
+      margin: 30px;
+   }
+
+   .trois:nth-of-type(3) {
+      flex:1 1 95%;
+      margin: 30px;
+   }
+
+   .quatre {
+      flex: 0 1 45%;
+      margin: 30px;
+   }
+}
+
+@media screen and (max-width:799px){
+
+   .col {
+      display: none;
+   }
+   .trois{
+flex:1 1 95%;
+margin: 30px;
+
+   }
+.quatre{
+flex:1 1 95%;
+margin: 30px;
+
+}
+
+
+
+
+
+
+}

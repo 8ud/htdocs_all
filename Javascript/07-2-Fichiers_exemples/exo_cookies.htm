@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Document</title>
+   <style>
+      *{
+    box-sizing: border-box;
+    font-family: verdana;
+   }
+   #loginbloc {
+      width:500px;
+      margin:30px auto;
+      border-radius:7px;
+      border:2px solid #ccc;
+      background-color: #b71540;
+      padding:30px;
+      display: flex;
+      flex-direction: column;
+      }
+        .line {
+           background-color: #f6b93b;
+           border-radius: 7px;
+           padding: 15px;
+           margin: 5px 0;
+           display: flex;
+           justify-content: space-between;
+        }
+        label{flex: 1 0 90px;display: inline-block;text-align: right;/* vertical-align: middle; *//* display: inline-block; */padding-top: 7px;}
+        .inp{border-radius: 5px;border: none;outline: none;font-size: 1.3em;color: #6c6a6a;padding: 5px 15px;/* flex: 5; */margin: 0 5px;}
+        #valid {
+          border: 1px solid #eee;
+          padding: 15px 30px;
+          /* background-image: linear-gradient(0deg, #5940cf, #7ee6fc); */
+          color: white;
+          font-size: 1.5em;
+          margin: 20px auto 0 auto;
+          border-radius: 3px;
+          transition:all 0.5s;
+          cursor: pointer;
+          background-color: #6c0e27;
+        }
+        #valid:hover {
+          box-shadow: 0 0 40px rgba(0,0,0,0.5);
+          transform: scale(1.2);
+        }
+        #loginbloc{
+          position:relative;
+        }
+        #refresh{
+          width:30px;
+          height:30px;
+          border-radius:50%;
+          color:white;
+          background-color: black;
+          position: absolute;
+          right:-15px;
+          top:-15px;
+          text-align:center;
+          line-height:30px;
+          font-weight:bold;
+          cursor:pointer;
+
+
+        }
+   </style>
+</head>
+<body>
+    <form action="" method="post" id="loginform">
+     <div id="loginbloc">
+        <div class="line">
+           <label for="login">Login</label>
+           <input type="text" autocomplete="off" class="inp" id="login" value="portnawak">
+        </div>
+        <div class="line">
+           <label for="pass">Password</label>
+           <input type="text" autocomplete="off" class="inp" id="pass" value="portnawak">
+        </div>
+       
+        <div class="line"><input type="checkbox" id="rememberMe"> Se souvenir de moi</div>
+        <input type="submit" value="LOGIN" id="valid">
+      <div id="refresh" title="rafraîchir">R</div>
+     </div>
+   </form>
+</body>
+</html>

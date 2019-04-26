@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var nbr=maxi=moy=total=0, mini=1000;
+	for(var i=1;i<50;i++) {
+		nbr=Math.round(Math.random()*100+100);
+		total+=nbr;
+		if(nbr<mini){mini=nbr;}
+		if(nbr>maxi){maxi=nbr;}
+	}
+	moy = Math.round(total/i);
+	alert("Mini = "+mini+"\nMaxi = "+maxi+"\nMoyenne = "+moy+"\n en "+i+" tirages");
+    </script>
+</body>
+</html>

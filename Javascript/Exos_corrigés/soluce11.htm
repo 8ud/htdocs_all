@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <label for="noms">Liste des prénoms</label>
+    <select name="noms" id="noms">
+    <script>
+        //liste de départ
+        //Noble Serina Nathan Octavia Risa Orla Plato Elaine Harper Oleg Alan Igor Karyn India Nero Ferris Eden Candace Althea Charlotte Alika Halla Talon Yen Tarik Cyrus Kalia Candice Anthony Alika Faith Zeph Cullen Brittany Iona William Kameko Bradley Kaye Aristotle Orlando Geraldine Deacon Martina Jillian Cruz Maxwell Roth Kyle Ann Veda Zachery Bryar Cailin Evelyn Reese Gray Silas Uriel Dennis Laura Ivy Germane Ross Dacey Stone Claire Fletcher Xavier Daquan Finn Fallon Stone Cora Coby Martha Keith Florence Chadwick Hannah Stacy Stewart Alma Damian Nerea Blythe Cooper Macon Nichole Rylee Jeremy Merritt Cheryl Craig Marvin Nola Stacy Hasad Warren Alan
+        //Utiliser les remplacements de caractères ST3 : transformer les espaces en sauts le ligne
+        // c'est plus simple dans un nouveau document CTRL+F2 sur VSCODE, ALT+F3 sur ST3
+        // transformer en tableau "",
+       var liste= ["Noble","Serina","Nathan","Octavia","Risa","Orla","Plato","Elaine","Harper","Oleg","Alan","Igor","Karyn","India","Nero","Ferris","Eden","Candace","Althea","Charlotte","Alika","Halla","Talon","Yen","Tarik","Cyrus","Kalia","Candice","Anthony","Alika","Faith","Zeph","Cullen","Brittany","Iona","William","Kameko","Bradley","Kaye","Aristotle","Orlando","Geraldine","Deacon","Martina","Jillian","Cruz","Maxwell","Roth","Kyle","Ann","Veda","Zachery","Bryar","Cailin","Evelyn","Reese","Gray","Silas","Uriel","Dennis","Laura","Ivy","Germane","Ross","Dacey","Stone","Claire","Fletcher","Xavier","Daquan","Finn","Fallon","Stone","Cora","Coby","Martha","Keith","Florence","Chadwick","Hannah","Stacy","Stewart","Alma","Damian","Nerea","Blythe","Cooper","Macon","Nichole","Rylee","Jeremy","Merritt","Cheryl","Craig","Marvin","Nola","Stacy","Hasad","Warren","Alan"];
+      //trier, puis inverser
+       liste.sort().reverse();
+
+        for(var i=0;i<liste.length;i++){
+            var n=liste[i];
+            document.write('<option value="'+n+'">'+n+'</option>')
+        }
+
+    </script>
+    </select>
+</body>
+</html>

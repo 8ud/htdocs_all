@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous">
+   <!-- GoogleFonts -->
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit:900">
+
+   <title>Formulaire JS - Terrain de jeu</title>
+   <style>
+      *{
+           box-sizing: border-box;
+           font-family: verdana;
+           font-size:16px;
+        }
+        body {
+           background-color: #efefef;
+        }
+        h1{
+         font-family: 'Kanit', sans-serif;
+         font-size:2em;
+        }
+        h3 {
+           font-size: 1.2em;
+        }
+        .bloc {
+           border-radius:7px;
+           border:2px solid #ddd;
+           background-color: #fff;
+           padding:15px;
+           height: 100%;
+        }
+        input[type=text]{
+           margin-bottom:5px;
+        }
+        .formbloc {
+
+        }
+        .col-4{
+           min-height: 150px;
+           margin-bottom:30px;
+        }
+        #ref, #result {
+         min-height: 80px;
+         border: 2px solid #b8b8b8;
+         background-color: rgb(206, 206, 206);
+         margin: 15px 0 15px 15px;
+         border-radius: 7px;
+         display:flex;
+         flex-direction:column;
+         justify-content: center;
+         
+      }
+      input[type="submit"], input[type="reset"]{
+         padding:15px 30px;
+         font-weight:bold;
+         font-size: 1.2em;
+      }
+
+.must::placeholder {
+
+   color: red;
+}
+
+.pass{
+
+   font-size: 10px;
+}
+
+
+     </style>
+</head>
+
+<body>
+   <!-- Debut de page-->
+<form action="http://www.pleione.fr/validform" method="get">
+   <div class="container">
+      <div class="row">
+         <div class="col-12 text-center mt-3">
+            <h1>Javascript & Formulaires</h1>
+         </div>
+         <div class="col-12" id="ref">
+           
+         </div>
+         <div class="col-4">
+            <div class="bloc" id="radiobloc">
+               <h3>Radios</h3>
+               <div class="flex justif-between">
+
+                  <div class="formbloc" id="radiobloc1">
+                     <label for="rad1">Alpha</label> <input type="radio" class="f form-control rad" name="radio" id="rad1"
+                        value="alpha" checked>
+                  </div>
+                  <div class="formbloc" id="radiobloc2">
+                     <label for="rad2">Beta</label> <input type="radio" class="f form-control rad" name="radio" id="rad2"
+                        value="beta">
+                  </div>
+                  <div class="formbloc" id="radiobloc3">
+                     <label for="rad3">Gamma</label> <input type="radio" class="f form-control rad" name="radio" id="rad3"
+                        value="gamma">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-4">
+            <div class="bloc">
+               <h3>Checkboxes</h3>
+               <div class="flex justif-between">
+                  <div class="formbloc" id="cbbloc1">
+                     <label for="cb1">Delta</label> <input class="f form-control cb" type="checkbox" id="cb1" value="delta"
+                        name="delta">
+                  </div>
+                  <div class="formbloc" id="cbbloc2">
+                     <label for="cb3">Epsilon</label> <input class="f form-control cb" type="checkbox" id="cb2" value="epsilon"
+                        name="epsilon" checked>
+                  </div>
+                  <div class="formbloc" id="cbbloc3">
+                     <label for="cb3">Zeta</label> <input class="f form-control cb" type="checkbox" id="cb3" value="zeta"
+                        name="zeta">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-4">
+            <div class="bloc" id="inputbloc">
+               <h3>Input texte</h3>
+               <input type="text" id="txt1" class="f form-control" placeholder="Je s'appelle txt1" value="" name="eta"><div class="pass">champ</div>
+               <input type="text" id="txt2" class="f form-control" placeholder="Je s'appelle txt2" value="" name="theta"><div class="pass">de 8 à 16 caractères</div>
+            </div>
+         </div>
+
+         <div class="col-4">
+            <div class="bloc">
+               <h3>Select</h3>
+               <div class="flex justif-between" id=" selectbloc">
+                  <select name="select1" id="select1" class="f form-control w50">
+                     <option value="s1-elem1" class="f">Sel1 Elem. 1</option>
+                     <option value="s1-elem2" class="f">Sel1 Elem. 2</option>
+                     <option value="s1-elem3" class="f">Sel1 Elem. 3</option>
+                     <option value="s1-elem4" class="f">Sel1 Elem. 4</option>
+                     <option value="s1-elem5" class="f">Sel1 Elem. 5</option>
+                  </select>
+                  <select name="select2" id="select2" class="f form-control w50">
+                     <option value="s2-elem1" class="f">Sel2 Elem. 1</option>
+                     <option value="s2-elem2" class="f">Sel2 Elem. 2</option>
+                     <option value="s2-elem3" class="f">Sel2 Elem. 3</option>
+                     <option value="s2-elem4" class="f">Sel2 Elem. 4</option>
+                     <option value="s2-elem5" class="f">Sel2 Elem. 5</option>
+                  </select></div>
+            </div>
+         </div>
+
+         <div class="col-4">
+            <div class="bloc">
+               <h3>Slider</h3>
+               <div class="formbloc" id="sliderbloc">
+                  <input class="f form-control cb" type="range" id="slider1" value="iota" name="iota" min=0 max=100
+                     value=50>
+               </div>
+            </div>
+         </div>
+
+         <div class="col-4">
+            <div class="bloc" id="areabloc">
+               <textarea name="area51" id="area51" class="f form-control">J'me sens vidé...</textarea>
+            </div>
+         </div>
+
+      </div>
+      <div class="row">
+         <div class="col-12 text-center">
+            <input class="f" type="reset" value="Annuler" id="reset">
+            <input class="f" type="submit" value="SUBMIT" id="submit">
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-12" id="result">
+            <h3>Résultats JS</h3>
+            <div id="jsresults">A publier ici (#jsresults)</div>
+         </div>
+      </div>
+   </div>
+</form>
+
+   <!-- Fin de page-->
+
+   <!-- Optional JavaScript -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"></script>
+   <!-- JQuery -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script>
+      $(document).ready(function () {
+
+         $(".f").on("mouseover", function (e) {
+            var theID = $(this).attr("id");
+            var parentID = $(this).parent().attr("id") == "undefined" ? "Inconnu" : $(this).parent().attr(
+               "id");
+            var theVAL = $(this).val() == "" ? "N.C." : $(this).val();
+            var theNAME = $(this).attr("name");
+            var str = "<span><strong>Elément</strong> : Nom = " + theNAME + ", Id = " + theID + ", Value = " +
+               theVAL +
+               "</span><span><strong>Parent</strong> : Id = " + parentID+"</span>";
+            $("#ref").html(str);
+         });
+
+      });
+
+//afficher et récuperer les données dans resultatJS
+
+var champtext1 = document.querySelector("#txt1");
+
+//  document.querySelector("#jsresults").innerHTML = "input texte de eta = " +champtext1+"<br/> input texte de theta = "+champtext2;
+
+
+champtext1.addEventListener("blur",affiche);
+
+function affiche(){
+   
+   document.querySelector("#jsresults").innerHTML  ="input texte de eta = "+ champtext1.value;
+   
+}
+
+champtext1.addEventListener("blur",oblig); 
+
+function oblig(){
+   
+   if(champtext1.length = 0 ) {
+      
+      champtext1.nextSibling.innerHTML = "champ obligatoire";
+      champtext1.classList.add("must");
+      // champtext1.style.backgroundColor = "red";
+   }
+   
+}
+var nbChar = "";
+var champtext2 = document.querySelector("#txt2");
+
+champtext2.addEventListener("keyup",secu);
+
+function secu(){
+ /* var lng = champtext2.value.length;
+ if(lng<=8){
+ var l= 8-lng;
+champtext2.nextSibling.textContent = "rajoutez "+ l+" caractère(s)"; 
+} */
+
+if(champtext2.value.length<8){
+
+champtext2.nextSibling.textContent = "8 caractères minimum";
+ champtext2.style.backgroundColor = "white";
+ champtext2.nextSibling.style.color = "#495057";
+}else if(champtext2.value.length<11){
+   
+   champtext2.nextSibling.textContent = "mot de passe faible";
+   champtext2.style.backgroundColor = "#e74c3c";
+   champtext2.nextSibling.style.color = "#e74c3c";
+}else if(champtext2.value.length<14){
+   
+   champtext2.nextSibling.textContent = "mot de passe moyen";
+   champtext2.style.backgroundColor = "#f1c40f";
+   champtext2.nextSibling.style.color = "#f1c40f";
+}else if(champtext2.value.length<=16){
+   
+   
+   champtext2.nextSibling.textContent = "mot de passe fort";
+   champtext2.style.backgroundColor = "#2ecc71";
+   champtext2.nextSibling.style.color = "#2ecc71";
+}else {
+   
+   champtext2.nextSibling.textContent = "vous-avez rentrez trop de caractères";
+   champtext2.nextSibling.style.color = "#495057";
+   champtext2.style.backgroundColor = "white";
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+   </script>
+   <style>
+      /** Commun */
+      * {
+         padding: 0;
+         margin: 0;
+         box-sizing: border-box;
+      }
+
+      /** Flex direction */
+      .flex {
+         display: flex;
+      }
+
+      .row {
+         flex-direction: row;
+      }
+
+      .row-reverse {
+         flex-direction: row-reverse;
+      }
+
+      .column {
+         flex-direction: column;
+      }
+
+      .column-reverse {
+         flex-direction: column-reverse;
+      }
+
+      .wrap {
+         flex-wrap: wrap;
+      }
+
+      .wrap-reverse {
+         flex-wrap: wrap-reverse;
+      }
+
+      /** Alignement axe principal */
+      .justif-start {
+         justify-content: flex-start;
+      }
+
+      .justif-center {
+         justify-content: center;
+      }
+
+      .justif-between {
+         justify-content: space-between;
+      }
+
+      .justif-around {
+         justify-content: space-around;
+      }
+
+      .justif-evenly {
+         justify-content: space-evenly;
+      }
+
+      .justif-end {
+         justify-content: flex-end;
+      }
+
+      /** Alignement axe perpendiculaire */
+      .align-start {
+         align-items: flex-start;
+      }
+
+      .align-center {
+         align-items: center;
+      }
+
+      .align-stretch {
+         align-items: stretch;
+      }
+
+      .align-baseline {
+         align-items: baseline;
+      }
+
+      .align-end {
+         align-items: flex-end;
+      }
+
+      /** Répartition axe perpendiculaire */
+      .content-start {
+         align-content: flex-start;
+      }
+
+      .content-center {
+         align-content: center;
+      }
+
+      .content-stretch {
+         align-content: stretch;
+      }
+
+      .content-between {
+         align-content: space-between;
+      }
+
+      .content-around {
+         align-content: space-around;
+      }
+
+      .content-end {
+         align-content: flex-end;
+      }
+
+      /** Alignement individuel */
+      .self-start {
+         align-self: flex-start;
+      }
+
+      .self-center {
+         align-self: center;
+      }
+
+      .self-stretch {
+         align-self: stretch;
+      }
+
+      .self-baseline {
+         align-self: baseline;
+      }
+
+      .self-end {
+         align-self: flex-end;
+      }
+
+      /** Taille automatique */
+      .large {
+         flex: 0 1 100%;
+      }
+
+      .flexauto {
+         flex: auto;
+      }
+
+      .flexinitial {
+         flex: initial;
+      }
+
+      .flexnone {
+         flex: none;
+      }
+
+      .clearflex {
+         /* Equivalent de clear:both pour flex : retour à la ligne*/
+         flex: 1 0 100%;
+         overflow: hidden;
+         height: 0;
+         margin: 0;
+         padding: 0;
+         border: none;
+      }
+
+      /** Tailles x/12*/
+
+      .flex1 {
+         flex: 1;
+      }
+
+      .flex2 {
+         flex: 2;
+      }
+
+      .flex3 {
+         flex: 3;
+      }
+
+      .flex4 {
+         flex: 4;
+      }
+
+      .flex5 {
+         flex: 5;
+      }
+
+      .flex6 {
+         flex: 6;
+      }
+
+      .flex7 {
+         flex: 7;
+      }
+
+      .flex8 {
+         flex: 8;
+      }
+
+      .flex9 {
+         flex: 9;
+      }
+
+      .flex10 {
+         flex: 10;
+      }
+
+      .flex11 {
+         flex: 11;
+      }
+
+      .flex12 {
+         flex: 12;
+      }
+
+      /** Centrage automatique du contenu*/
+      .centre {
+         align-items: center;
+         display: flex;
+         justify-content: center;
+      }
+   </style>
+</body>
+
+</html>

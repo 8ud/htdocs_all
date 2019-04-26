@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Titre</title>
+    <style>
+        *{
+            font-family: verdana;
+        }
+        label{
+            width:90px;
+            display:inline-block
+        }
+        input {
+            padding:2px;
+            margin:5px 0;
+        }
+
+    </style>
+</head>
+<body>
+    <input type="button" value="Start" id="on">
+    <input type="button" value="Stop" id="off">
+<h1 id="titre">0 seconde</h1>
+<script>
+    var i=1, decompte;
+    var titre=document.querySelector('#titre');
+    var bton=document.querySelector('#on');
+    var btoff=document.querySelector('#off');
+    bton.addEventListener('click',startCount);
+    btoff.addEventListener('click',stopCount);
+  
+    //la ref au compteur doit être globale car affectée dans startCount
+    // mais utilisée dans stopCount
+    
+    function  startCount(){
+        decompte = setInterval(action, 1000);
+    }
+
+        function stopCount() {
+            alert('toto');
+            clearInterval(decompte);
+            titre.innerHTML= "0 seconde";
+            i=0;
+        }
+   
+   
+    function action(){
+        titre.innerHTML=i+ " secondes";
+        i++;
+    }
+    
+    </script>
+</body>
+</html>

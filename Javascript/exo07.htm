@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+   <meta charset="UTF-8">
+   <title>exo7</title>
+
+   <style>
+      /* Styles internes */
+   </style>
+</head>
+
+<body>
+   <!-- debut page -->
+
+
+
+   <!-- fin page -->
+
+   <script>
+      ///ICI MES SCRIPTS INTERNES
+      var texte = "A Xanadu, lui, Kubla Khan se décréta un fastueux palais des plaisirs";
+
+      var xana1 = texte.slice(2, 8);
+
+      var xana2 = xana1.toUpperCase();
+
+      texte = texte.replace(xana1, xana2);
+
+
+      var kub1 = texte.slice(15, 25);
+
+      var kub2 = kub1.toUpperCase();
+
+      texte = texte.replace(kub1, kub2);
+
+      texte = texte.replace(/ /g, "");
+
+      texte = texte.replace(/,/g, "");
+
+
+
+texte = texte.split("").reverse().join("");
+
+
+
+      document.write(texte);
+   </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>onclick</title>
+    <meta name="author" content="david">
+   
+    <style>
+        /* Styles internes */
+    </style>
+</head>
+
+<body>
+    <!-- debut page -->
+
+    <article id="art-un">
+      <h1>Premier titre</h1>
+      <input type="text" value="Survolez-moi ou écrivez" />
+      <label>Libellé</p>
+      </article>
+      <script>
+     var parag = document.querySelector("input[type=text]");
+var label = document.querySelector("label");
+parag.addEventListener("mouseover", mouseov);
+parag.addEventListener("mouseout", retour); // action de retour
+parag.addEventListener("keydown", keydo);
+parag.addEventListener("keyup", retour); // action de retour
+function mouseov(){
+label.innerHTML="Vous me survolez";
+label.style.color="red";
+}
+function keydo(){
+label.innerHTML="Vous écrivez";
+label.style.color="green";
+
+}
+function retour(){ // une seule action de retour
+label.innerHTML="libellé";
+label.style.color="black";
+console.log(this.value);
+}
+      </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>kind of blue</title>
+    <meta name="author" content="david">
+    <meta name="description" content="XXX description XXX.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, shrink-to-fit=no">
+    <!-- Compatibilité IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- HTML5 shim pour IE 6-8 -->
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+    <!-- GoogleFonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,500,700,900|Montserrat">
+    <!-- CSS Perso -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styles internes */
+    </style>
+</head>
+
+<body>
+    <!-- debut page -->
+<header></header>
+<section></section>
+
+
+
+
+    <!-- fin page -->
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Script Externes -->
+    <!-- <script src="script.js"> </script> -->
+    <script>
+        ///ICI MES SCRIPTS INTERNES
+var dataURL="http://localhost/json/data/album.json";
+var requete = new XMLHttpRequest();
+requete.open("GET",dataURL);
+requete.responseType="json";
+requete.send();
+
+requete.onload=function(){
+var album=requete.response;
+ creationEntete(album);
+ creationDescription(album);
+}
+
+
+function creationEntete(album){
+
+   var header=document.querySelector('header');
+var section=document.querySelector('section');
+
+var h1 = document.createElement("h1");
+
+h1.textContent=album.titre;
+
+header.appendChild(h1);
+
+
+}
+
+function creationDescription(data){
+
+ //creationDescription(album);
+
+}
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

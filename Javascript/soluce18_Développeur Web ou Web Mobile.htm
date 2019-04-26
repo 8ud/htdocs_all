@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <article id="art-un">
+        <h1>Premier titre</h1>
+        <p>Premier paragraphe avec <a href="#">un lien</a> bidon</p>
+        <p>Second paragraphe</p>
+    </article>
+
+    <script>
+        //Il faut prendre en compte les indentations qui génèrent des éléments vides
+        //Le paragraphe comporte TEXTE[0] LIEN[1] TEXTE[2]
+        //Donc : 
+        alert(document.querySelector("#art-un").childNodes[3].childNodes[1].innerHTML);
+    </script>
+</body>
+
+</html>

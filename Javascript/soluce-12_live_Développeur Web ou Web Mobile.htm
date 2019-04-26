@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Document</title>
+   <style>
+      table {
+         border: 3px solid steelblue;
+      }
+
+      td {
+         width: 30px;
+         height: 30px;
+         background-color: #ccc;
+      }
+
+      tr.couleur td {
+         background-color: gold !important;
+      }
+      .bigblue{
+         font-size:50px;
+         color:blue;
+      }
+   </style>
+</head>
+
+<body>
+
+
+<div id="article">
+emjlsdmgljsg
+sg
+</div>
+   <script>
+     
+      var liste = ["Arley","Caty","Arlyn","Chad","Cristobal","Briana","Barbie","Carla","Aubrey","Beitris","Archer","Briney","Anatole","Alidia","Aeriel","Claudette","Arther","Berta","Constanta","Carlo","Bobbie","Ambrosi","Baudoin","Adelind","Bent","Brynn","Bonnee","Ashly","Adella","Arda","Anthia","Akim","Conroy","Ashleigh","Batholomew","Carmencita","Caye","Clarine","Cristi","Ario","Belva","Consolata","Brigitte","Barbey","Abdel","Amberly","Craig","Bret","Averil","Chester","Alisander","Claudelle","Chaddie","Collin","Brocky","Clyde","Cassandre","Chase","Analiese","Cyndi","Bertina","Brok","Bernita","Bradan","Arabel","Carie","Cristin","Brion","Cletus","Cesar","Alvin","Artemus","Allix","Cloris","Alexio","Caryl","Bordy","Corby","Brandi","Corry","Brandise","Christian","Alberto","Ann-marie","Barret","Berty","Arleta","Anitra","Bella","Cyrillus","Ambrosius","Bathsheba","Barb","Briny","Cherise","Clemente","Aguste","Broddie","Constance","Borden","Constantin"];
+
+      ajoutPrn(liste, "Stéphane");
+      ajoutPrn(liste, "Alfredo");
+      ajoutPrn(liste, "Carlotta");
+
+
+      var tabA=[], tabB=[], tabC=[];
+
+      for(indice in liste){
+         var prenom = liste[indice];
+         var premiereLettre = prenom.charAt(0);
+         
+         if(premiereLettre === "A"){
+            // si A
+            tabA.push(prenom);
+         } else if(premiereLettre === "B") {
+            // si B
+            tabB.push(prenom);
+         } else if(premiereLettre === "C"){
+            // si C
+            tabC.push(prenom);
+         } 
+
+      }
+// tabA.sort();
+// tabB.sort();
+// tabC.sort();
+      // creation du select des A
+    
+      function ajoutPrn(tablo, prenom){
+         tablo.push(prenom);
+      }
+
+
+      function prnSelect(label, tablo) {
+         tablo.sort();
+         document.write('<label>Prénoms en '+label+'</label><select name="prenom'+label+'" id="prenom'+label+'">');
+               for(index in tablo) {
+                  document.write('<option value="'+tablo[index]+'">'+tablo[index]+'</option>');
+               }
+            document.write('</select><br/>');
+      }
+prnSelect("A", tabA);
+prnSelect("B", tabB);
+prnSelect("C", tabC);
+
+
+/*
+         // creation du select des B
+      document.write('<label>Prénoms en B</label><select name="prenomsB" id="prenomsB">');
+         for(prnB in tabB) {
+            document.write('<option value="'+tabB[prnB]+'">'+tabB[prnB]+'</option>');
+         }
+      document.write('</select><br/>');
+
+ // creation du select des C
+ document.write('<label>Prénoms en C</label><select name="prenomsC" id="prenomsC">');
+         for(prnC in tabC) {
+            document.write('<option value="'+tabC[prnC]+'">'+tabC[prnC]+'</option>');
+         }
+      document.write('</select><br/>');
+*/
+   </script>
+
+
+</body>
+
+</html>

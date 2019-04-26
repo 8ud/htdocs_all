@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*EXO 1*/
+    var dateIsoLong = new Date("2029-06-21T12:00:00"); // printemps
+    alert(combienAn(dateIsoLong));
+    function combienAn(dte){
+        var anDate = dateIsoLong.getFullYear();
+        var dateNow = new Date();
+        var anNow = dateNow.getFullYear();
+        var anDiff = anDate-anNow;
+        return ("Entre "+anDate+" et "+anNow+" il y a "+anDiff+ " ans");
+    }
+
+
+    /*EXO 2*/
+    var dte = new Date("2020/02/20");
+    var jours = ["lundi","mardi","mercredi","jeudi","vendredi","samedi","dimanche"];
+    var mois = ["janvier","février","mars","avril","mai","juin","juillet","aout","septembre","octobre","novembre","décembre"];
+   
+    alert(frenchDate(dte));
+
+    function  frenchDate(d) {
+      
+        var j = d.getDate();
+        var mnum=d.getMonth();
+        var m= mois[mnum];
+        var y = d.getFullYear();
+        var jnum=d.getDay();
+        var jour=jours[jnum];
+        return "Le "+j+" "+m+" "+y+" tombe un "+jour;
+    }
+
+    </script>
+</body>
+</html>

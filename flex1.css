@@ -1,0 +1,59 @@
+*{
+box-sizing: border-box;
+}
+
+
+div, main {
+   border: 2px solid red;
+   margin:2px;
+
+}
+
+main{
+   width:80%;
+   min-width: 400px;
+   max-width: 1200px;
+   margin:0 auto;
+   min-height:400px;
+}
+
+.flex{
+   display:flex;
+}
+
+.row{
+flex-direction:row;
+}
+
+.column{
+   flex-direction: column;
+}
+
+.wrap{
+   flex-wrap:wrap;
+}
+
+.center{
+   display:flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.f1{
+flex:1;
+}
+
+.f2{
+flex:2;
+}
+
+.f3{
+flex:3;
+}
+
+.justif-start{
+   justify-content:flex-start;
+}
+
+
+

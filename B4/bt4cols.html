@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous">
+   <title>Squelette BT4</title>
+   <style>
+      [class*=container] {
+         border: 2px dashed rgb(255, 178, 178);
+      }
+
+      .content {
+         border: 1px solid #ccc;
+         font-size: 13px;
+         /* color:red; */
+         padding: 15px 20px;
+         border-radius: 7px;
+      }
+
+      #size,
+      #larg {
+         width: 60px;
+         height: 60px;
+         border-radius: 50%;
+         border: 2px solid #444;
+         box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+         font-size: 30px;
+         line-height: 56px;
+         text-align: center;
+         align-items: center;
+         color: rgb(44, 44, 44);
+         position: absolute;
+         left: 10px;
+         top: 10px;
+         opacity: 0.7;
+         background-color: rgb(219, 217, 217);
+         z-index: 10000;
+      }
+
+      #larg {
+         top: 80px;
+         border-radius: 0;
+         box-shadow: none;
+         font-size: 15px;
+         height: 40px;
+         justify-content: center;
+         align-items: center;
+         display: flex;
+      }
+
+      @media screen and (max-width:576px) {
+         #size:after {
+            content: "XS";
+         }
+      }
+
+      @media screen and (min-width:576px) and (max-width:768px) {
+         #size:after {
+            content: "SM";
+         }
+      }
+
+      @media screen and (min-width:768px) and (max-width:992px) {
+         #size:after {
+            content: "MD";
+         }
+      }
+
+      @media screen and (min-width:992px) and (max-width:1200px) {
+         #size:after {
+            content: "LG";
+         }
+      }
+
+      @media screen and (min-width:1200px) {
+         #size:after {
+            content: "XL";
+         }
+      }
+
+      .row:nth-child(1n)>[class^=col]>.content {
+         background-color: rgb(250, 156, 156);
+         border: 3px solid rgb(199, 5, 5)
+      }
+
+      .row:nth-child(2n)>[class^=col]>.content {
+         background-color: rgb(250, 201, 156);
+         border: 3px solid rgb(199, 115, 5)
+      }
+
+      .row:nth-child(3n)>[class^=col]>.content {
+         background-color: rgb(214, 250, 156);
+         border: 3px solid rgb(92, 199, 5)
+      }
+
+      .row:nth-child(4n)>[class^=col]>.content {
+         background-color: rgb(156, 250, 226);
+         border: 3px solid rgb(5, 199, 173)
+      }
+
+      .row:nth-child(5n)>[class^=col]>.content {
+         background-color: rgb(156, 173, 250);
+         border: 3px solid rgb(5, 8, 199)
+      }
+
+      .row:nth-child(6n)>[class^=col]>.content {
+         background-color: rgb(250, 156, 245);
+         border: 3px solid rgb(199, 5, 141)
+      }
+
+
+      * {
+         box-sizing: border-box;
+      }
+
+      body {
+         /* font-size: 16px; */
+         font-weight: bold;
+      }
+
+      .row {
+         margin: 30px;
+      }
+
+
+      .rouge {
+         color: red;
+      }
+
+      .vert {
+         color: green;
+      }
+
+      .jaune {
+         color: gold;
+      }
+
+      .penche {
+         font-style: italic;
+      }
+
+      .baleze {
+         font-size: 30px;
+      }
+
+      /*
+[class^=col]:nth-child(1n){
+   background-color: #FFC312;
+}
+[class^=col]:nth-child(2n){
+   background-color: #C4E538;
+}
+[class^=col]:nth-child(3n){
+   background-color: #12CBC4;
+}
+[class^=col]:nth-child(4n){
+   background-color: #FDA7DF;
+}
+[class^=col]:nth-child(5n){
+   background-color: #ED4C67;
+}
+[class^=col]:nth-child(6n){
+   background-color: #EE5A24;
+}
+[class^=col]:nth-child(7n){
+   background-color: #009432;
+}
+[class^=col]:nth-child(8n){
+   background-color: #0652DD;
+}
+[class^=col]:nth-child(9n){
+   background-color: #9980FA;
+}
+[class^=col]:nth-child(10n){
+   background-color: #833471;
+}
+[class^=col]:nth-child(11n){
+   background-color: #EA2027;
+}
+[class^=col]:nth-child(12n){
+   background-color: #1B1464;
+}
+*/
+   </style>
+
+</head>
+
+<body>
+   <!-- Debut de page-->
+   <!--  AFFICHAGE DES TAILLES -->
+   <div id="size"></div>
+   <div id="larg"></div> <!-- Conservez-ces DIV -->
+
+
+   <div class="container">
+      <div class="row">
+         <div class="col"></div>
+         <div class="col"></div>
+
+      </div>
+      <div class="row">
+         <div class="col"></div>
+         <div class="col"></div>
+         <div class="col"></div>
+
+      </div>
+      <div class="row">
+         <div class="col"></div>
+         <div class="col"></div>
+         <div class="col"></div>
+
+      </div>
+      <div class="row">
+         <div class="col">toto</div>
+         <div class="col"></div>
+         <div class="col"></div>
+         <div class="col"></div>
+         <div class="col"></div>
+         <div class="col"></div>
+      </div>
+      <div class="row">
+         <div class="col"></div>
+         <div class="col"></div>
+         <div class="col"></div>
+         <div class="col"></div>
+         <div class="col"></div>
+         <div class="col"></div>
+         <div class="col"></div>
+         <div class="col"></div>
+         <div class="col"></div>
+      </div>
+   </div>
+
+
+
+   <!-- Fin de page-->
+
+   <!-- Optional JavaScript -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"></script>
+
+   <script>
+      $(function () {
+         $('#larg').html(window.innerWidth + "px");
+         //sélectionne chaque .col
+         $('[class^=col]').each(function () {
+            //récupère ses classes
+            var cls = $(this).attr("class");
+            // ajoute une div.content avec mention de ses classes
+
+            $(window).resize(function () {
+
+               $('#larg').html(window.innerWidth + "px");
+
+            });
+            //$(this).prepend(cls+" ");
+            /* A DECOMMENTER POUR CREER DES BLOCS DANS LES .COL */
+            // récupère le contenu des .col
+            var contenu = $(this).html();
+            // supprime le contenu des .col
+            $(this).html("");
+            //Ajoute une .content dans .col avec le contenu mémorisé + classes
+            $(this).prepend("<div class=\"content\">" + cls + " " + contenu + "</div>");
+         });
+
+
+      });
+   </script>
+</body>
+
+</html>

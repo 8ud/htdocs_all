@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>exoDOM</title>
+    <meta name="author" content="david">
+   
+    <style>
+        /* Styles internes */
+*{
+   box-sizing: border-box;
+}
+
+
+.etiquette{
+border: 2px solid black;
+width: 500px; 
+height: 300px;
+position: relative;
+margin: 40px;
+padding: 15px;
+
+}
+#suppr{
+border: 2px solid red;
+width: 20px;
+height: 20px;
+border-radius: 50%;
+position: absolute; top: -10px; right: -10px;
+
+
+
+
+}
+
+    </style>
+</head>
+
+<body>
+    <!-- debut page -->
+<article id="art-un">
+   <h1>Premier titre</h1>
+<p>premier paragraphe avec<a href="#">un lien</a>bidon</p>
+<p>Second paragraphe</p>
+
+
+</article>
+    <!-- fin page -->
+  
+    <script>
+
+
+
+    //1 creer l'element
+
+/* var formulaire = document.createElement("form");
+var badge = document.createElement("div");
+var rond = document.createElement("div");
+var check = document.createElement("input");
+var mail = document.createElement("input");
+var bouton = document.createElement("input");
+// var pbody = document.querySelector("body");
+var texte = document.createTextNode("envoyer");
+// 2 modifier l'element
+
+badge.className = "etiquette";
+rond.id = "suppr";
+check.type = "checkbox";
+check.id = "cocher";
+mail.type = "email";
+mail.id = "courrier";
+bouton.type =  "button";
+bouton.id = "ok";
+
+// 3 creer l'element
+
+document.body.appendChild(formulaire);
+formulaire.appendChild(badge);
+badge.appendChild(rond);
+badge.appendChild(check);
+badge.appendChild(mail);
+badge.appendChild(bouton);
+bouton.appendChild(texte); */
+
+/* var div1 = document.createElement("div");
+var img = document.createElement("img");
+var titre = document.createElement("h3");
+var t = document.createTextNode("Mon super titre 1");
+var para = document.createElement("p");
+var p = document.createTextNode("Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit saepe veniam soluta modi voluptate maiores quae iure, sequi fugit. Saepe ratione optio aut recusandae debitis facere exercitationem cupiditate fuga veniam sed necessitatibus consequatur deserunt, rerum, voluptas perferendis neque cum, nihil tempore id animi! Recusandae minus dolore, eum quia accusamus harum?");
+var bouton = document.createElement("input");
+
+div1.className = "bloc";
+div1.id = "bloc1";
+img.src = "https://loremflickr.com/200/200/dog";
+img.alt = "Desc image";
+bouton.type = "button";
+bouton.value = "Suite.."
+
+
+div1.appendChild(img);
+div1.appendChild(titre);
+titre.appendChild(t);
+div1.appendChild(para);
+para.appendChild(p);
+div1.appendChild(bouton);
+document.body.appendChild(div1); */
+
+var titre = document.querySelector("h1");
+titre.addEventListener("mouseover",reaction1);
+titre.addEventListener("mouseover",reaction2);
+
+function reaction1(){
+   alert("tu m'as eu");
+}
+function reaction2(){
+   alert("encore toi ?");
+}
+
+
+    </script>
+</body>
+</html>

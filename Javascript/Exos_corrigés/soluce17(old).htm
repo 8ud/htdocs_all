@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var p1 = document.createElement('p');
+	p1.id="p1";
+	var t = document.createTextNode('Nouveau paragraphe');
+	p1.appendChild(t);
+	document.body.appendChild(p1);
+
+	var lien = document.createElement('a');
+	lien.style.color="steelblue";
+	var txtlien = document.createTextNode('Recherche');
+	lien.href="https://www.google.fr";
+	
+	lien.appendChild(txtlien);
+	document.body.insertBefore(lien, p1);
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+/*404 Not Found*/
+.article
+{
+	width: 800px;
+	min-width: 600px;
+	border: 1px solid #BEBCBC;
+	padding: 10px;
+	margin: 15px 0px;
+}
+.auteur
+{
+	margin-top: 10px;
+	border: 1px solid #B50F0F;
+	padding: 5px;
+	color: #69759B;
+	background-color: #D2DBF7;
+}
+.corpsarticle
+{
+	width: 778px;
+	min-height: 190px;
+	border: 1px solid #49E534;
+	float: none;
+	margin: 10px 0px 0px;
+	padding: 10px;
+}
+.textarticle
+{
+	float: left;
+	width: 584px;
+	border: 1px solid #A79C63;
+	min-height: 186px;
+}
+.blocimage
+{
+	border: 1px solid #C50FC1;
+	padding: 10px;
+	width: 150px;
+	float: left;
+	margin-right: 20px;
+}
+.imagearticle
+{
+	border: #8D8D8D;
+	width: 100%;
+	height: 125px;
+}
+.legendeimage
+{
+	color: #B2B2B2;
+	font-size: 10px;
+	text-align: center;
+}
+.titrearticle
+{
+	float: left;
+	width: 555px;
+	border: 1px solid #F2A2A2;
+	padding: 5px;
+	color: #D68383;
+	font-weight: bold;
+}
+.datearticle
+{
+	border: 1px solid #757575;
+	float: right;
+	width: 212px;
+	text-align: center;
+	padding: 5px;
+	color: #546BB0;
+	font-style: italic;
+	font-weight: bold;
+}
+/*This file does not exist on the server.
+This file is an empty place holder.*/

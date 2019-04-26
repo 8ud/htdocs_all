@@ -1,0 +1,215 @@
+Extension	Pays
+ad	Andorre
+ae	Emirats Arabes Unis
+af	Afghanistan
+ag	Antigua-et-Barbuda
+ai	Anguilla
+al	Albanie
+am	Arménie
+ao	Angola
+aq	Antarctique
+ar	Argentine
+as	Samoa (îles)
+at	Autriche
+au	Australie
+az	Azerbaïdjan
+ba	Bosnie-Herzégovine
+bb	Barbade
+bd	Bangladesh
+be	Belgique
+bf	Burkina Faso
+bg	Bulgarie
+bh	Bahrayn
+bi	Burundi
+bj	Bénin
+bm	Bermudes
+bn	Sultanat de Brunei
+bo	Bolivie
+br	Brésil
+bs	Bahamas
+bt	Bhoutan
+bw	Botswana
+by	Biélorussie
+bz	Belize
+ca	Canada
+cf	République centrafricaine
+cg	Congo
+ch	Suisse
+ci	Cote-d Ivoire
+ck	Cook (îles)
+cl	Chili
+cm	Cameroun
+cn	Chine
+co	Colombie
+cr	Costa Rica
+cu	Cuba
+cv	République du Cap-Vert
+cx	Christmas (îles)
+cy	Chypre
+cz	République tchèque
+de	Allemagne
+dj	Djibouti
+dk	Danemark
+dm	Dominique
+do	République Dominicaine
+dz	Algérie
+ec	Equateur
+ee	Estonie
+eg	Egypte
+eh	Sahara occidental
+er	Erythrée
+es	Espagne
+et	Ethiopie
+fi	Finlande
+fj	Fidji
+fm	Micronésie
+fo	Féroé (îles)
+fr	France
+ga	Gabon
+gb	Grande-Bretagne (Royaume-Uni)
+gd	Grenade
+ge	Géorgie
+gh	Ghana
+gi	Gibraltar
+gl	Groenland
+gm	Gambie
+gn	Guinée
+gq	Guinée-Equatoriale
+gr	Grèce
+gt	Guatemala
+gu	Guam
+gw	Guinée-Bissau
+gy	Guyana
+hk	Hong Kong
+hm	Heard et McDonald (îles)
+hn	Honduras
+hr	Croatie (Hrvatska)
+ht	Haïti
+hu	Hongrie
+id	Indonésie
+ie	Irlande
+il	Israël
+in	Inde
+iq	Irak
+ir	Iran
+is	Islande
+it	Italie
+jm	Jamaïque
+jo	Jordanie
+jp	Japon
+ke	Kenya
+kg	Kirghizstan
+kh	Cambodge
+ki	Kiribati
+km	Comores (îles)
+kn	Saint-Kitts-et-Nevis
+kp	Corée-du-Nord
+kr	Corée-du-Sud
+kw	Koweït
+ky	Iles Caïmans
+kz	Kazakhstan
+la	Laos
+lb	Liban
+lc	Sainte-Lucie
+li	Liechtenstein
+lk	Sri Lanka
+lr	Libéria
+ls	Lesotho
+lt	Lituanie
+lu	Luxembourg
+lv	Lettonie
+ly	Libye
+ma	Moroc
+mc	Monaco
+md	Moldovie
+mg	Madagascar
+mh	Marshall (îles)
+mk	Macédoine
+ml	Mali
+mm	Myanmar (Birmanie)
+mn	Mongolie
+mo	Macao
+mp	Mariannes-du-Nord
+mq	Martinique
+mr	Maurétanie
+ms	Montserrat
+mt	Malte
+mu	Maurice (île)
+mv	Maldives
+mw	Malawi
+mx	Mexique
+my	Malaysia
+mz	Mozambique
+na	Namibie
+nc	Nouvelle-Calédonie
+ne	Niger
+nf	Norfolk (île)
+ng	Nigeria
+ni	Nicaragua
+nl	Pays-Bas
+no	Norvège
+np	Népal
+nr	Nauru
+nu	Niue
+nz	Nouvelle-Zélande (Aotearoa)
+om	Oman
+pa	Panama
+pe	Pérou
+pf	Polynésie-Française
+pg	Papouasie-Nouvelle-Guinée
+ph	Philippines
+pk	Pakistan
+pl	Pologne
+pm	St-Pierre-et-Miquelon
+pr	Porto Rico
+pt	Portugal
+pw	Palau
+py	Paraguay
+qa	Qatar
+re	Le Réunion
+ro	Romania
+ru	Russie
+rw	Ruanda
+sa	Arabie Saoudite
+sb	Salomon (îles)
+sc	Seychelles
+sd	Soudan
+se	Suède
+sg	Singapour
+sh	Sainte-Hélène
+si	Slovénie
+sj	Svalbard et Jan Mayen (îles)
+sk	Slovaquie 
+sl	Sierra Leone
+sm	Saint-Marin
+sn	Sénégal
+so	Somalie
+tn	Tunisie
+to	Tonga
+tp	Timor-Oriental
+tr	Turquie
+tt	Trinidad-et-Tobago
+tv	Tuvalu
+tw	Taiwan
+tz	Tanzanie
+ua	Ukraine
+ug	Ouganda
+uk	Royaume-Uni
+um	Iles rattachées aux Etats-Unis
+us	Etats-Unis d Amérique
+uy	Uruguay
+uz	Ouzbékistan
+va	Etat de la Cité du Vatican
+vc	Saint-Vincent-et-les Grenadines
+ve	Venezuela
+vg	Iles Vierges du Royaume-Uni
+vi	Iles Vierges des Etats-Unis
+vn	Viêt Nam
+vu	Vanuatu
+wf	Wallis-et-Futuna Islands
+ws	Samoa
+ye	Yémen
+yt	Mayotte
+za	Afrique du Sud
+zm	Zambie
+zw	Zimbabwé

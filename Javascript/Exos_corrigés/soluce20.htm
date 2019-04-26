@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Titre</title>
+</head>
+<body>
+<h1>Premier titre</h1>
+<p>Premier paragraphe avec <a href="#">un lien</a> bidon</p>
+    
+<script>
+    
+    var titre = document.querySelector("h1");
+    titre.addEventListener("click", alert('coucou')); // se lance automatiquement
+    titre.addEventListener("click", reaction());// noter l'absence de parenthèses
+    // donc l'instruction suivante doit se lancer automatiquement aussi.
+    // pourtant rien ne se passe.
+
+    //... mais si on ajoute un alertr() DANS la fonction
+    // on voit qu'elle se lance...
+
+    function reaction(){
+        alert("fonction réaction lancée");
+        this.innerHTML="Argh ! Tu m'as eu !";
+        this.style="color:red;font-size:25px";
+    }
+
+    // en fait, la fonction se lance automatiquement
+    // DONC aucun évènement sur aucun élément ne l'a déclenchée
+    // DONC...this ne correspond à rien.
+    // la fonction fait ce qu'on lui demande, mais sur AUCUN ELEMENT.
+    // CQFD
+
+
+
+</script>
+        
+</body>
+</html>

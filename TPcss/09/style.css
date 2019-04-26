@@ -1,0 +1,333 @@
+BODY
+{
+	font: 12px "Trebuchet MS", Verdana, sans-serif;
+	color: #666666;
+	background: #FFFFFF;
+}
+*
+{
+	padding: 0;
+	margin: 0;
+}
+.clear
+{
+	clear: both;
+}
+#wrap
+{
+	background: url(images/headerbg.jpg) no-repeat;
+	width: 783px;
+	margin: auto;
+	border-top: 8px solid #EFEFEF;
+}
+#header
+{
+	height: 128px;
+}
+#content
+{
+	padding: 0 38px 25px;
+}
+#footer
+{
+	background: url(images/footerbg.jpg) no-repeat bottom;
+	padding-bottom: 25px;
+}
+A
+{
+	color: #006600;
+	text-decoration: none;
+}
+A:visited, :active
+{
+	text-decoration: none;
+	color: #003300;
+}
+A:hover
+{
+	color: #000;
+	text-decoration: underline;
+}
+#content P
+{
+	line-height: 22px;
+}
+H2
+{
+	font: normal 18px "Trebuchet MS", Verdana, sans-serif;
+	color: #808040;
+}
+#content H3
+{
+	font: bold 14px "Trebuchet MS", Verdana, sans-serif;
+	color: #666;
+}
+#content .subhead
+{
+	display: block;
+	padding: 3px 5px 0 8px;
+	margin-bottom: 5px;
+}
+/*Home Page Columns*/
+#col_1
+{
+	width: 30%;
+	padding: 5px;
+}
+#col_3
+{
+	margin-left: 33%;
+	margin-right: 33%;
+	padding: 5px;
+}
+#col_2
+{
+	width: 30%;
+	padding: 5px;
+}
+#topcol
+{
+	padding: 45px 5px 20px;
+	margin-bottom: 15px;
+}
+#col_1 P, #col_2 P, #col_3 P
+{
+	padding: 0 8px 5px;
+	line-height: 18px;
+	display: block;
+/*Delete this Line if you don't want fixed height*/
+	height: 120px;
+}
+/*----*/
+#col_1 .subhead
+{
+	background: url(images/colsh1.jpg) no-repeat;
+	height: 22px;
+}
+#col_2 .subhead
+{
+	background: url(images/colsh2.jpg) no-repeat;
+	height: 22px;
+}
+#col_3 .subhead
+{
+	background: url(images/colsh3.jpg) no-repeat;
+	height: 22px;
+}
+#content DIV IMG
+{
+	background: #EFEFEF;
+	border: 1px solid #CCCCCC;
+	padding: 3px;
+}
+.leftalign
+{
+	margin: 5px 10px 5px 0;
+}
+.rightalign
+{
+	margin: 5px 5px 5px 10px;
+}
+.linkbutton
+{
+	display: block;
+	background: url(images/button1.jpg) no-repeat;
+	width: 79px;
+	height: 22px;
+	text-align: right;
+	padding: 5px 20px 0 5px;
+}
+.linkbutton:hover
+{
+	background: url(images/button3.jpg) no-repeat;
+}
+#sitename
+{
+	display: block;
+	padding: 60px 55px 0 45px;
+	color: #808040;
+	font: small-caps bolder 22px "Trebuchet MS", Verdana, sans-serif;
+	text-align: right;
+}
+#sitename .desc
+{
+	font-size: 14px;
+	color: #CCC;
+	font-variant: normal;
+	display: block;
+}
+#topmenu UL
+{
+	text-align: center;
+	display: block;
+/*change the value below to decrease or increase the width of top menu*/
+	width: 500px;
+/*--*/
+}
+#topmenu LI
+{
+	display: inline;
+}
+#topmenu A, #topmenu A:visited, #topmenu A:active
+{
+	display: block;
+	float: left;
+	height: 21px;
+	padding: 5px 15px 0;
+	text-decoration: none;
+	color: #000000;
+}
+#topmenu A:hover
+{
+	background: url(images/topmenubhvr.jpg) repeat-x bottom;
+}
+#topmenu .active A, #topmenu .active A:visited, #topmenu .active A:active
+{
+	background: url(images/topmenubhvr.jpg) repeat-x bottom;
+	color: #000;
+}
+#ft_btm
+{
+	padding: 30px 230px 70px 30px;
+	text-align: right;
+}
+#btm_cont
+{
+	padding: 5px 45px 30px;
+	background: url(images/bottomend.jpg) no-repeat center bottom;
+}
+.btm_box
+{
+	width: 110px;
+	padding: 5px;
+	margin: 8px;
+}
+#rightcontent
+{
+	width: 475px;
+	padding: 45px 0 0;
+}
+#sidebar
+{
+	margin: 0px 500px 10px 0;
+	padding-top: 45px;
+}
+#content TABLE
+{
+	width: 90%;
+	border: 1px solid #A0C6EB;
+	margin-bottom: 20px;
+}
+#content TH
+{
+	background: #D2E3F3;
+	padding: 5px 15px;
+	color: #000000;
+	font-weight: bold;
+	text-align: center;
+	border-bottom: 1px solid #BDDB99;
+	font-size: 16px;
+}
+#content TD
+{
+	border-bottom: 1px solid #D2E3F3;
+	padding: 5px 15px;
+	border-right: 1px solid #D2E3F3;
+}
+.textfield
+{
+	display: block;
+	width: 50%;
+	margin: 3px 3px 3px 30px;
+	padding: 3px;
+	border: 1px solid #D2E3F3;
+	background: #EEF4FB;
+}
+LABEL
+{
+	display: block;
+	margin: 3px;
+	padding: 5px;
+}
+.button
+{
+	display: block;
+	padding: 0px;
+	margin: 3px;
+	border: 2px solid #C8E9F7;
+	color: #000000;
+	background: #EEF4FB;
+}
+.textfield:hover
+{
+	background: #FFFFCC;
+}
+.textfield:focus
+{
+	background: #FFFFFF;
+}
+.hide
+{
+	display: none;
+}
+#rightcontent UL, #rightcontent OL
+{
+	padding: 10px;
+	margin: 10px;
+}
+OL
+{
+	list-style: decimal;
+}
+#rightcontent UL
+{
+	list-style: square;
+}
+#rightcontent P
+{
+	margin-bottom: 20px;
+}
+#rightcontent LI
+{
+	padding: 3px;
+}
+#sidebar UL
+{
+	list-style: none;
+	margin-bottom: 15px;
+}
+#sidebar LI
+{
+	display: block;
+	height: 25px;
+	border-bottom: 1px dashed #CCCCCC;
+}
+#sidebar LI A
+{
+	display: block;
+	height: 20px;
+	padding: 5px 5px 0;
+}
+#sidebar LI A:hover
+{
+	background: #EFEFEF;
+	text-decoration: none;
+}
+BLOCKQUOTE
+{
+	display: block;
+	padding: 5px 5px 5px 55px;
+	margin: 5px;
+	background: url(images/quote.jpg) no-repeat;
+}
+BLOCKQUOTE P
+{
+	margin-bottom: 0;
+	font: normal 16px Georgia, "Times New Roman", Times, serif;
+}
+.extract
+{
+	float: left;
+	width: 300px;
+}
+

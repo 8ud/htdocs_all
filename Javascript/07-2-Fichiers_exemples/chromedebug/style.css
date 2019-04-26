@@ -1,0 +1,108 @@
+* {
+  font-family: montserrat;
+  box-sizing: border-box;
+}
+main {
+  min-width: 480px;
+  max-width: 800px;
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #ccc;
+}
+.textwhite {
+  color: white
+}
+.green {
+  background-color: #006266;
+}
+.greenc {
+  background-color: #A3CB38;
+}
+.gold {
+  background-color: #F79F1F;
+}
+.red {
+  background-color: #EA2027;
+}
+.coral {
+  background-color: #EE5A24;
+}
+.round {
+  border-radius: 7px;
+}
+/** Commun */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+input {
+  padding: 3px 10px;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+}
+.line {
+  margin: 15px 0;
+  padding: 15px 30px;
+  border-radius: 25px
+}
+/** Flex direction */
+.flex {
+  display: flex;
+}
+.row {
+  flex-direction: row;
+}
+.column {
+  flex-direction: column;
+}
+.column-reverse {
+  flex-direction: column-reverse;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+/** Centrage automatique du contenu*/
+.centre {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.txtcenter {
+  text-align: center;
+}
+.wide {
+  width: 100%;
+}
+.valbloc {
+  border-radius: 50%;
+  min-width: 30px;
+  min-height: 30px;
+  padding: 2px;
+  margin: 2px
+}
+.valBTN {
+  color: white;
+  font-weight: bold;
+  width: 30px;
+  height: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+}
+#minus {
+  background-image: linear-gradient(0deg, rgb(228, 15, 15), rgb(226, 93, 93));
+}
+#more {
+  background-image: linear-gradient(0deg, rgb(19, 139, 19), rgb(93, 226, 93));
+}
+#minus:hover {
+  background-image: linear-gradient(180deg, rgb(228, 15, 15), rgb(226, 93, 93));
+}
+#more:hover {
+  background-image: linear-gradient(180deg, rgb(19, 139, 19), rgb(93, 226, 93));
+}

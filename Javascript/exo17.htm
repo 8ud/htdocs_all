@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>exo17</title>
+    <meta name="author" content="david">
+   
+    <style>
+        /* Styles internes */
+        .bloc{ border: 2px solid black;
+               }
+input{
+
+   float: right;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <!-- debut page -->
+
+
+
+
+    <!-- fin page -->
+   
+    <script>
+    // creer l'element
+var div1 = document.createElement("div");
+// creer le papa
+var papabody = document.querySelector("body");
+// creer l'element
+var image = document.createElement("img");
+var titreH3 = document.createElement("h3");
+var para = document.createElement("p");
+var bouton = document.createElement("input");
+var dav = "le tire";
+var titre =  document.createTextNode("Le TITRE");
+var textPara = document.createTextNode("Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni ea, eius consequuntur veniam ipsam odio cupiditate aliquid ipsa quidem nostrum optio at commodi tempore iste ducimus minima similique. Quos labore commodi eligendi ipsam blanditiis, et ipsa ratione dolorum adipisci quas magnam debitis impedit beatae maxime pariatur error deleniti soluta dolor?");
+
+// modifier l'element
+div1.className = "bloc";
+image.src = "https://www.loremflickr.com/200/200/cat";
+image.alt = "chat";
+bouton.type = "button";
+bouton.value = "suite";
+
+// injecter le fils dans le pere
+papabody.appendChild(div1);
+div1.appendChild(image);
+div1.appendChild(titreH3);
+div1.appendChild(para);
+div1.appendChild(bouton);
+titreH3.appendChild(titre);
+para.appendChild(textPara);
+
+
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+	h3 {
+
+		color:steelblue;
+	}
+
+	em {
+		color:red;
+		background-color: gold;
+		font-style:italic;
+		margin-left:50px;
+	}
+
+	image {
+		display:none;
+	}

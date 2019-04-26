@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+   <meta charset="UTF-8">
+   <title>modifDOM</title>
+   <meta name="author" content="david">
+
+   <style>
+      /* Styles internes */
+      .bigblue {
+
+         font-size: 3em;
+         color: rgb(163, 102, 45);
+         text-align: center;
+
+      }
+   </style>
+</head>
+
+<body>
+   <!-- debut page -->
+
+   <!-- fin page -->
+
+   <script>
+      function creerTitre(tid, textTitre) {
+         // tid= id du titre
+
+
+
+
+
+         //etape1 : créer l'élément
+         var titreH1 = document.createElement("h1");
+         //selectionner le papa
+         var papabody = document.querySelector("body");
+         //document.querySelector("Body").appendChild(titreH1);
+
+         // etape2 : modifier l'élément
+         titreH1.id = tid+" "+i;
+         titreH1.title = textTitre;
+         titreH1.className = "bigblue";
+         titreH1.textContent = textTitre+" "+i;
+
+
+         //etape3 injecter le fils dans le père
+         papabody.appendChild(titreH1);
+
+      }
+
+
+      for (var i = 1; i <= 50; i++) {
+
+         creerTitre("titre", "titre");
+
+
+      }
+      // changer la couleur du titre aleatoirement
+      // var tabcolors = ["red", "steelblue", "#CFB"];
+      
+
+// methode 2
+    /*   function creerTitre(tid, textTitre) {
+         // tid= id du titre
+
+
+
+
+         //etape1 : créer l'élément
+         var titreH1 = document.createElement("h1");
+         //selectionner le papa
+         var papabody = document.querySelector("body");
+         //document.querySelector("Body").appendChild(titreH1);
+
+         // etape2 : modifier l'élément
+         titreH1.id = tid+" "+i;
+         titreH1.title = textTitre;
+         titreH1.className = "bigblue";
+         // titreH1.textContent = textTitre+" "+i;
+         var contenuT = document.createTextNode(textTitre);
+
+
+         //etape3 injecter le fils dans le père
+         papabody.appendChild(titreH1);
+
+      } */
+
+
+
+   </script>
+</body>
+
+</html>

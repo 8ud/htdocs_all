@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Debogage avec Chrome</title>
+  <meta name="author" content="Fano Pinard">
+  <meta name="description" content="XXX description XXX.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, shrink-to-fit=no">
+  <!-- Compatibilité IE -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- HTML5 shim pour IE 6-8 -->
+  <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  <!-- GoogleFonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Montserrat">
+  <!-- CSS Perso -->
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- debut page -->
+  <main class="round green textwhite flex centre txtcenter column">
+    <h1>Débogage avec Chrome</h1>
+    <div class="line greenc">
+      <label for="valInitiale">Valeur</label> <input type="text" id="valInitiale"  value="1" title="Entrez la valeur du pas">
+      <input type="button" id="minus" value="&lt;&lt;" class="valBTN red txtcenter" title="Ajouter des éléments à la suite">
+      <input type="button" id="more" value="&gt;&gt;" class="valBTN red txtcenter" title="Retirer des éléments à la suite">
+    </div>
+    <div class="line gold wide flex row wrap" id="suite">
+      <div class="valbloc centre coral">1</div>
+    </div>
+    <div class="line" style="text-align:left;width:70%">
+      <strong>Comportement souhaité :</strong>
+      <ul>
+        <li>Choisir une valeur numérique</li>
+        <li>Bouton vert : ajouter des multiples à la suite</li>
+        <li>Bouton rouge : supprimer des multiples</li>
+        <li>Modifier la valeur actualise les multiples</li>
+      </ul>
+      <br>
+      <div class="red">
+        <h2>
+          bugs :
+        </h2>
+        <ul>
+          <li>Les éléments ne récupèrent pas la valeur insérée</li>
+          <li>La modif d'une valeur ne modifie pas les éléments existants</li>
+          <li>Une valeur non texte ne déclenche pas d'erreur</li>
+        </ul>
+        <span style="color:black"> <strong>Débugger le script avec les DevTools Chrome</strong></span>;
+       
+      </div>
+    </div>
+  </main>
+  <!-- fin page -->
+  <script src="script.js"></script>
+</body>
+</html>

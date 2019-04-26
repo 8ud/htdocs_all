@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<h1>CLIC DROIT DESACTIVE ! ET PAN !</h1>
+
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur magnam nisi unde vero doloribus ad quis. Nostrum aut incidunt molestias commodi, non odit distinctio reprehenderit!</p>
+<div id="nolink">
+    <ul>
+        <li><a href="http://www.google.fr">lien désactive1</a></li>
+        <li><a href="http://www.google.fr">lien désactive2</a></li>
+        <li><a href="http://www.google.fr">lien désactive3</a></li>
+        <li><a href="http://www.google.fr">lien désactive4</a></li>
+        <li><a href="http://www.google.fr">lien désactive5</a></li>
+        <li><a href="http://www.google.fr">lien désactive6</a></li>
+        <li><a href="http://www.google.fr">lien désactive7</a></li>
+        <li><a href="http://www.google.fr">lien désactive8</a></li>
+        <li><a href="http://www.google.fr">lien désactive9</a></li>
+        <li><a href="http://www.google.fr">lien désactive10</a></li>
+    </ul>
+</div>
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore obcaecati alias omnis repellat minus possimus eveniet nostrum modi cumque natus.</p>
+
+
+    <script>    
+    
+    var b=document.body;
+		b.addEventListener('contextmenu',e);
+		function e(e){
+			e.preventDefault();
+			e.stopPropagation();
+    }
+    // si les liens sont enfants d'un id #nolink :
+		var nolink = document.querySelector('#nolink');
+		nolink.addEventListener('click',forbiddenlink);
+		
+		function forbiddenlink(e){
+			e.preventDefault();
+		}
+    </script>
+
+       
+</body>
+</html>

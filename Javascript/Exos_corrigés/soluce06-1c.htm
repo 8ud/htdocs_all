@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       td {
+          width:30px;
+          height:30px;
+          background-color: rgb(189, 223, 252);
+          text-align:center;
+          vertical-align:center;
+       }
+       table {
+          border:3px solid rgb(17, 84, 110);
+          margin:50px;
+       }
+       .mult{
+          background-color: rgb(255, 223, 41);
+       }
+    </style>
+</head>
+<body>
+   
+    <script>
+
+
+/*Exo 6-1c : A l'aide de document.write() :
+document.write("truc <strong>important</strong>à écrire");
+créez un code qui écrit sur la page les tables de multiplications de 1 à 10
+*/
+
+// déclaration des variables
+var maxVal = prompt("Combien de rangées à la matrice ?"), valeur, classe;
+
+var multiple = prompt("Quel multiple tu veux voir ?");
+
+//on transforme la valeur max en nombre
+maxVal = parseInt(maxVal);
+
+// on limite les valeurs possibles entre 3 et 20... en ternaire, pour faire style :-)
+maxVal= maxVal< 3 ? 3:maxVal>20? 20:maxVal;
+
+//idem pour le multiple
+multiple = parseInt(multiple);
+multiple= multiple< 2 ? 2:multiple;
+
+
+document.write('<table>');
+   //boucle des rangées
+   for( var rangee =1;rangee <=maxVal;rangee++){
+      document.write("<tr>");
+         
+      // boucle des cellules   
+      for(var cellule = 1;cellule <=maxVal; cellule++){
+         valeur = rangee*cellule;
+         classe= valeur%multiple==0 ?"mult":"";
+         document.write("<td class=\""+classe+"\">"+valeur+"</td>");
+      }
+      document.write("</tr>");
+   }
+   
+   document.write('</table>');
+   
+    </script>
+</body>
+</html>

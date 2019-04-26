@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>XXX titre XXX</title>
+	<meta name="author" content="Fano Pinard">
+	<meta name="description" content="XXX description XXX.">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, shrink-to-fit=no">
+	<!-- Compatibilité IE -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- HTML5 shim pour IE 6-8 -->
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	
+	<!-- Font Awesome -->
+
+	<!-- CSS Perso -->
+<style>
+
+	
+	
+
+div {
+		background-color: #b8e994;
+		color:#666;
+		width:350px;
+		padding:30px;
+	}
+</style>
+</head>
+<body>
+	<input type="button" value="Ma position" id="btn">
+	<input type="button" value="Antipodes" id="btn2">
+	
+	<script>
+		document.querySelector('#btn').addEventListener('click',myPos);
+		document.querySelector('#btn2').addEventListener('click',antipod);
+		var screenH=screen.availHeight;
+		var screenW=screen.availWidth;
+		var popupH = 600;
+		var popupW = 800;
+		var popupY = (screenH-popupH)/2;
+		var popupX = (screenW-popupW)/2;
+		var popup,antipod, lat, long; // globales
+		var zoomLevel="3z";
+
+		function myPos(){
+			antipod=0;
+			position();
+		}
+
+		function antipod(){
+			antipod=1;
+			position();
+		}
+		
+		function position(){
+			var emplacement = navigator.geolocation;
+			if(emplacement){
+				emplacement.getCurrentPosition(extractCoords);
+			}
+		}
+
+		function extractCoords(pos){
+			lat = pos.coords.latitude;
+			long = pos.coords.longitude;
+			if(antipod){
+				lat=lat<0? Math.abs(lat):0-lat;
+			}
+			popup =window.open("https://www.google.fr/maps/@"+lat+","+long+","+zoomLevel,"popup", "left="+popupX+",top="+popupY+",width="+popupW+",height="+popupH);
+		}
+
+	
+	</script>
+</body>
+</html>

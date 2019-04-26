@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .papa, .fiston {
+            border:2px solid white;
+            box-shadow:0 0 20px rgba(0,0,0,0.2);
+            margin:0 auto;
+            color:white;
+            font-family: verdana;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .papa {
+            width:66vw;
+            height:50vh;
+            background-color: rgb(119, 217, 235);
+            flex-direction: column;
+           
+        }
+        .fiston {
+            background-color: rgb(201, 237, 246);
+            width:50%;
+            height:50%;
+            
+        }
+    </style>
+</head>
+<body>
+<div class="papa" id="papa">papa
+    <div class="fiston" id="fiston">fiston</div>
+</div>
+    
+<script>
+    
+    var papa = document.querySelector(".papa");
+    var fiston = document.querySelector(".fiston");
+    
+    papa.addEventListener("mouseover", survol);// pas de parenthèses
+    papa.addEventListener("mouseout", quitte);// pas de parenthèses
+    fiston.addEventListener("mouseover", survol);// pas de parenthèses
+    fiston.addEventListener("mouseout", quitte);// pas de parenthèses
+    papa.addEventListener("click", papalert);
+	fiston.addEventListener("click", fistonalert);
+				
+		function papalert(){
+			alert("papa cliqué");
+		}
+		function fistonalert(){
+			alert("fiston cliqué");
+		}
+    
+    function survol(){
+        this.style.backgroundColor="#be2edd";
+    }
+    function quitte(){
+        var id = {papa:"#c7ecee", fiston:"#22a6b3"}; // tableau des codes couleurs
+        this.style.backgroundColor=id[this.id];
+    }
+    element.addEventListener("click", reaction, false); // (défaut) réaction bubbling
+    element.addEventListener("click", reaction, true); // réaction capture
+</script>
+</body>
+</html>

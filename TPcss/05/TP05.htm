@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+   <meta charset=UTF-8">
+   <head>
+      <title>
+         CSS 5
+      </title>
+      <!-- pour tout le monde, la police (qui veille, prête à bondir) sera tahoma-->
+      <!--table aura une bordure de 3px double couleur steelblue -->
+      <!-- les cellules avec l'attribut align auront un fond de couleur gold -->
+      <!-- mais les cellules dont l'attribut align est au centre auront un fond #fdd et un texte #f33 -->
+      <!-- enfin les TD qui sont les 3° enfants d'un TR auront un texte vert-->
+      <!-- les input, select et textarea auront tous une longueur de 250 px et une bordure de 1px solid steelblue-->
+      <!-- ...sauf les types radio et checkbox, bien entendu, qui auront une largeur de 50px et aucune bordure-->
+      <!-- les input de type password auront un fond #fdd et un texte #f33 (comme les TD align="center", quoi) -->
+      <!-- la première et la dernière option des sélect doivent être en arial, italique de taille 8px-->
+      <!-- tous les types de liens seront en comic sans ms de taille 13, non soulignés, mais avec une bordure 1px dotted #ccc et seront de couleur steelblue-->
+      <!-- mais les liens survolés passeront en italique, couleur de fond: lightsteelblue, texte: #fff et n'auront aucune bordure -->
+      <!-- les images ont une marge de 25 px partout sauf en bas où elle est de 60px -->
+      <!-- les images ont une double bordure de couleur #ccc et un fond de couleur peachpuff-->
+      <!-- sauf celles qui sont dans un blockquote, qui elles n'auront ni marge, ni bordure, mais feront précisément 25px par 25 px-->
+      <!-- ET INTERDICTION DE TOUCHER AU CODE A PARTIR DE CE POINT-->
+   </head>
+   <body>
+      Nam condimentum lobortis dignissim. Proin pharetra posuere velit in pretium. Sed vestibulum tellus a tellus suscipit varius. Pellentesque feugiat arcu ut <a href="#fg">lectus convallis</a> sed ornare arcu rhoncus. Donec odio enim, <a href="#znbk">convallis vel tempus eu</a>, molestie vitae quam. <em>Vestibulum ornare molestie libero vel placerat.</em> Cras et est felis, et consectetur purus. 
+      <blockquote>Pellentesque aliquam <img src="img2.jpg">luctus <img src="img1.jpg">nunc vel tincidunt. </blockquote>
+      Quisque rhoncus neque vel enim hendrerit eget molestie neque volutpat. <em>Mauris dapibus massa at metus consequat pulvinar.</em> Mauris ac velit quis dolor lobortis sagittis. 
+      <a href="#1">rzeklhf</a> | <a href="#2">ftuk khh</a> | <a href="#3"> iuzternb klhighn</a> | <a href="#4"> sglkj hb iu</a>
+      <table width="100%" >
+         <label>Ceci est un tableau</label>
+         <tr>
+            <td align="right">Cellule</td>
+            <td align="center">Cellule</td>
+            <td>Cellule</td>
+         </tr>
+         <tr>
+            <td align="center">Cellule</td>
+            <td align="right">Cellule</td>
+            <td align="center">Cellule</td>
+         </tr>
+         <tr>
+            <td align="right">Cellule</td>
+            <td>Cellule</td>
+            <td align="center">Cellule</td>
+         </tr>
+         <tr>
+            <td align="right">Cellule</td>
+            <td>Cellule</td>
+            <td  align="center">Cellule</td>
+         </tr>
+         <tr>
+            <td colspan="2"  align="right">Cellule 4</td>
+            <td>Cellule 5</td>
+         </tr>
+      </table>
+      <table width="100%" >
+         <label>Ceci est un tableau</label>
+         <tr>
+            <td align="right">Cellule</td>
+            <td align="center">Cellule</td>
+            <td>Cellule</td>
+         </tr>
+         <tr>
+            <td align="center">Cellule</td>
+            <td align="right">Cellule</td>
+            <td align="center">Cellule</td>
+         </tr>
+         <tr>
+            <td align="right">Cellule</td>
+            <td>Cellule</td>
+            <td align="center">Cellule</td>
+         </tr>
+         <tr>
+            <td align="right">Cellule</td>
+            <td>Cellule</td>
+            <td  align="center">Cellule</td>
+         </tr>
+         <tr>
+            <td colspan="2"  align="right">Cellule 4</td>
+            <td>Cellule 5</td>
+         </tr>
+      </table>
+      <table width="100%" >
+         <label>Ceci est un tableau</label>
+         <tr>
+            <td align="right">Cellule</td>
+            <td align="center">Cellule</td>
+            <td>Cellule</td>
+         </tr>
+         <tr>
+            <td align="center">Cellule</td>
+            <td align="right">Cellule</td>
+            <td align="center">Cellule</td>
+         </tr>
+         <tr>
+            <td align="right">Cellule</td>
+            <td>Cellule</td>
+            <td align="center">Cellule</td>
+         </tr>
+         <tr>
+            <td align="right">Cellule</td>
+            <td>Cellule</td>
+            <td  align="center">Cellule</td>
+         </tr>
+         <tr>
+            <td colspan="2"  align="right">Cellule 4</td>
+            <td>Cellule 5</td>
+         </tr>
+      </table>
+      <h2>Formulaires</h2>
+      <form>
+         <input type="text" name="tt1" value="Ligne de texte"><br>
+         <input type="password" name="pw1" value="Ligne de texte">Champ password<br>
+         <br>
+         Etes-vous d'accord ?<br>
+         <input type="radio" name="r1" value="Oui">Oui&nbsp;&nbsp;
+         <input type="radio" name="r1" value="Non">Non&nbsp;&nbsp;
+         <input type="radio" name="r1" value="Nsp" checked="checked">Nsp<br><br>
+         Goûts musicaux ?<br>
+         <input type="checkbox" name="cb1" value="jz">Jazz&nbsp;&nbsp;
+         <input type="checkbox" name="cb1" value="cl">Classic&nbsp;&nbsp;
+         <input type="checkbox" name="cb1" value="rk" checked="checked">Rock<br><br>
+         <img src="img1.jpg"><img src="img2.jpg"><img src="img1.jpg"><img src="img2.jpg"><img src="img1.jpg">
+         <textarea cols="25" rows="5" name="tb1" >Boite de texte de plusieurs lignes</textarea>
+         <br>
+         <select>
+            <option>-- Choix des desserts --</option>
+            <option>Salade</option>
+            <option>Fromage</option>
+            <option>Glace</option>
+            <option>Café & addition</option>
+         </select>
+         <br><br>
+         <select>
+            <option>-- Choix des desserts --</option>
+            <option>Salade</option>
+            <option>Fromage</option>
+            <option>Glace</option>
+            <option>Salade</option>
+            <option>Fromage</option>
+            <option>Glace</option>
+            <option>Café & addition</option>
+         </select>
+         <br><br>
+         Sélection de fichier<br>
+         <input type="file" name="file"><br><br>
+         <input type="button" name="btn1" value="Bouton simple">&nbsp;
+         <input type="reset" name="rst" value="Bouton reset">&nbsp;
+         <input type="submit" name="sub" value="Bouton submit">&nbsp;
+      </form>
+   </body>
+</html>

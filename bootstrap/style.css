@@ -1,0 +1,47 @@
+
+
+
+
+
+.col, .container, .row, [class^=col] {border:2px solid black; background-color: rgb(156, 173, 250);
+   border-radius: 5px;text-align: center;color:black; font-family: tahoma; font-size: 15px; padding: 15px;
+}
+
+
+
+.menu{
+   
+   background-color: #ffac19; 
+}
+
+.row1{min-height: 200px;
+}
+
+.photo{width:100%;}
+
+.center{
+   justify-content: center;
+   align-items: center;
+}
+
+.text1{
+   background-color: #645899;
+}
+
+.text2{
+   background-color: #ffc26c;
+}
+
+.text3{
+   background-color: #cc620f;
+   }
+
+.text4{
+   background-color: #320fcc;
+}
+
+.text5{background-color: #2d76ff;}
+
+.pad{
+   padding: 0;
+}

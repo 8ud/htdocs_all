@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Indentations de 3 tabs max --->
+    <article id="art-un">
+        <h1>Premier titre</h1>
+        <p>Premier paragraphe avec <a href="#">un lien</a> bidon</p>
+        <p>Second paragraphe</p>
+    </article>
+
+    <script>
+        var article = document.querySelector('#art-un');
+        alert("enfants de article = " + article.childNodes.length);
+        var i, removed = 0,
+            newdoc = "",
+            elt;
+        for (var i = 0; i < article.childNodes.length; i++) {
+            var elt = article.childNodes[i];
+            if (elt.textContent < 2) {
+                article.removeChild(elt);
+                removed++;
+            }
+        }
+        alert("retrait de " + removed + " éléments vides");
+        alert("enfants de article = " + article.childNodes.length);
+    </script>
+</body>
+
+</html>

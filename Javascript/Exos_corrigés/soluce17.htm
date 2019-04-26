@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Document</title>
+   <style>
+      * {
+         box-sizing: border-box;
+         font-family: verdana;
+      }
+
+          .bloc {
+         border: 2px solid #ccc;
+         padding: 15px;
+         background-color: #dedede;
+         float: left;
+         margin: 2em 2em 0 0;
+         width: calc((100% - 6em)/2);
+      }
+
+      .bloc img {
+         float: left;
+         background-color: #fff;
+         margin: 0 15px 15px 0;
+         padding: 15px;
+         width: 200px;
+         height: 200px;
+      }
+   </style>
+</head>
+
+<body>
+
+
+   <script>
+      //  création des éléments
+      var div = document.createElement("div");
+      var p = document.createElement("p");
+      var input = document.createElement("input");
+      var img = document.createElement("img");
+      var h3 = document.createElement("h3");
+      
+      // création des noeuds texte 
+      var tp = document.createTextNode(
+         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, dicta? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, dicta? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, dicta?"
+      )
+      var th3 = document.createTextNode("Mon super titre 1");
+
+      // Définition des attributs
+      div.className = "bloc";
+      div.id = "bloc1";
+
+      input.value = "Suite...";
+      input.type = "button";
+
+      img.src = "https://loremflickr.com/200/200/dog";
+      img.alt = "Description de l'image";
+
+      // imbrication des éléments
+      p.appendChild(tp); // ajout du texte dans le P
+      h3.appendChild(th3); // ajout du texte dans le H3
+      
+      // on crèeun tableau contenant tous les éléments à injecter dans la div, dans le bon ordre
+      var tElem = [img, h3, p, input];
+
+      //on boucle dans ce tableau et on ajoute chaque élément trouvé
+      // en tant qu'enfant de div
+      for (elem in tElem) {
+         div.appendChild(tElem[elem]);
+      }
+
+      // Injection de la div complète dans body
+      document.body.appendChild(div);
+
+/* //////////////FACULTATIF /////////////////*/
+
+      // sélection de la DIV créée
+      var x = document.querySelector("#bloc1");
+      
+      // 99 fois de suite
+      for (var i = 1; i < 100; i++) {
+         
+         var newElem = x.cloneNode(true); // on clone la div et ses descendants (true)
+         
+         var nb= i+1; // compteur  séparé pour ne pas risquer d'affecter i par erreur
+         newElem.id="bloc"+nb; // modification de l'ID de l'élément cloné
+         newElem.querySelector("h3").textContent="Mon super titre "+nb; // modification du titre du clone
+         document.body.appendChild(newElem); // injection du clone modifié dans la page
+      }
+   </script>
+</body>
+
+</html>

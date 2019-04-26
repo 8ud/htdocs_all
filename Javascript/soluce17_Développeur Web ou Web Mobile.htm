@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Document</title>
+   <style>
+      * {
+         box-sizing: border-box;
+         font-family: verdana;
+      }
+
+      .bigblue {
+         font-size: 5em;
+         color: lightsteelblue;
+         letter-spacing: -10px;
+         font-family: verdana;
+      }
+
+      .bloc {
+         border: 2px solid #ccc;
+         padding: 15px;
+         background-color: #dedede;
+         float: left;
+         margin: 2em 2em 0 0;
+         width: calc((100% - 6em)/2);
+      }
+
+      .bloc img {
+         float: left;
+         background-color: #fff;
+         margin: 0 15px 15px 0;
+         padding: 15px;
+         width: 200px;
+         height: 200px;
+      }
+   </style>
+</head>
+
+<body>
+
+
+   <script>
+      // var dce = function (e) {
+      //    return document.createElement(e);
+      // }
+      // var dctn = function (e) {
+      //    return document.createTextNode(e);
+      // }
+
+      //  création des éléments
+      var div = document.createElement("div");
+      var p = document.createElement("p");
+      var input = document.createElement("input");
+      var img = document.createElement("img");
+      var h3 = document.createElement("h3");
+      
+      // création des noeuds texte 
+      var tp = document.createTextNode(
+         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, dicta? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, dicta? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, dicta?"
+      )
+      var th3 = document.createTextNode("Mon super titre 1");
+
+      // injection des attributs
+      div.className = "bloc";
+      div.id = "bloc1";
+
+      input.value = "Suite...";
+      input.type = "button";
+
+      img.src = "https://loremflickr.com/200/200/dog";
+      img.alt = "Description de l'image";
+
+      // imbrication des éléments
+      p.appendChild(tp);
+      h3.appendChild(th3);
+      var tElem = [img, h3, p, input];
+      for (elem in tElem) {
+         div.appendChild(tElem[elem]);
+      }
+      document.body.appendChild(div);
+
+      var x = document.querySelector("#bloc1");
+      for (var i = 1; i < 100; i++) {
+         var newElem = x.cloneNode(true);
+         var nb= i+1;
+         newElem.id="bloc"+nb;
+         newElem.querySelector("h3").textContent="Mon super titre "+nb;
+         newElem.querySelector("input").setAttribute("data-value", "coucou les amis");
+         document.body.appendChild(newElem);
+      }
+   </script>
+</body>
+
+</html>

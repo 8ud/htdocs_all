@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Ca se passe en console avec F12
+    <script>
+    var syntax=shoot="",liste = ["tipède", "des pieds", "un remord ","drillon", "turion", "ctuaire"], s="";
+
+	while(liste.length>0){
+
+    shoot = liste.pop();
+    s=liste.length<=1?"":"s"; // pluriel ternaire :-)
+    syntax=liste.length!=0 ? "plus que "+ liste.length+" élément"+s:"plus aucun élément ";
+	console.log("Sans "+shoot+", liste n'a "+syntax );
+	}
+    </script>
+</body>
+</html>

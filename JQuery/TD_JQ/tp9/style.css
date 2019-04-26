@@ -1,0 +1,131 @@
+html {
+	background:url(images/blurrybgrd.jpg) no-repeat center center fixed;
+	background-size:cover;
+
+}
+body {
+	font-family:arial, verdana;
+	font-size:15px;
+	margin:0;
+	padding:0;
+	border:1px solid transparent;
+
+}
+#wrapper {
+	width: 500px;
+	margin:20px auto;
+	
+}
+
+#wrapper h1 {
+	color: #257450;
+	
+	text-align:center;
+}
+#vignettes {
+	background-color:white;
+	display: inline-block;
+	border:3px solid #ddd;
+	padding:  5px 20px;
+	width: 450px;
+	height: 500px;
+	overflow:auto;
+}
+.vignette {
+	display: block;
+	margin:30px 0;
+	background-color: #EDEDED;
+	border:2px solid #257450;
+}
+.vignette h2 {
+	color:#257450;
+	padding:15px;
+	margin:0;
+	border-bottom:2px solid #257450;
+}
+.vignette img {
+	width: 150px;
+	background-color:white;
+	margin:0 10px 10px 0;
+	padding:10px;
+	border:1px solid #ddd;
+	box-shadow:0 5px 10px #aaa;
+	float: left;
+}
+.vignette h2:first-letter {
+	text-transform: uppercase
+}
+.content {
+	padding:10px;
+}
+.content:after {
+	content:'';
+	clear:both;
+	display: block;
+}
+.prix {
+	font-weight: bold;
+	font-size:1.2em;
+	color: #009688;
+	float:right;
+	
+}
+.clearfix{
+	display:block;
+	clear: both;
+	content: '';
+}
+.description {
+	text-align: justify;
+	color:#333;
+}
+.details {
+	display:block;
+	float:right;
+	margin:20px 0 5px 0;
+	padding:10px 20px;
+	color:white;
+	background-color: #497798;
+	width: 70px;
+	text-align: center;
+	font-weight:bold;
+	cursor:pointer;
+}
+.details:hover {
+	background-color: #714B97;
+}
+
+.cache{
+
+width: 100vw;
+height: 100vh;
+background-color: rgba(22, 125, 209, 0.8);
+position: fixed;
+padding: 15px;
+display: none;
+z-index: 100000;
+
+}
+
+
+.affiche{
+
+margin: auto;
+width: 80%;
+height: 80%;
+background-color: #fff;
+border: 1px solid blue;
+padding: 15px;
+
+
+}
+
+.picture{
+padding: 15px;
+text-align: center;
+margin: auto;
+
+
+
+}
+

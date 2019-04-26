@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Choisissez votre mot de passe</h1>
+
+
+  <script>
+    // boolean de vérification de la validité du mot de passe
+    var mdpOK = false;
+    setTimeout(choixPass, 1000); // temporisation de 1sec
+
+    function choixPass() {
+      // action FAIRE tant que
+      do {
+        try { // début du code pouvant générer une erreur
+          var mdp = prompt("Entrez un mot de passe entre 6 et 12 caractères");
+          var longMdp = mdp.length; // longueur du mot de passe
+          if (longMdp < 6|| !longMdp) {
+            // si le mot de passe est trop court
+            throw " caractère(s) c'est trop court !"; // message d'exception
+          } else if (longMdp > 12) {
+            // sinon s'il est trop long
+            throw " caractères c'est trop long !"; // message d'exception
+          } else { // sinon il a la bonne taille
+            mdpOK = true; // Modification du booléen de condition logique de la boucle
+
+          }
+        } catch (error) {
+          alert(mdp+" ? " + longMdp+error);
+        }
+      } while (mdpOK === false);
+      alert('C\'est parfait, merci\nVotre mot de passe est : \n' + mdp);
+    }
+  </script>
+</body>
+
+</html>

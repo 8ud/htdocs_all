@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1 id="t">Dans 10...</h1>
+<script>
+    var t = document.querySelector("#t");
+    var decompte, i=3;
+
+    decompte = setInterval(countDown,1000); // lancement du décompte
+
+    function countDown(){
+        i--;
+        t.innerHTML="Dans "+i+"...";
+        if(i==0){
+            clearInterval(decompte)
+            t.innerHTML="Go !";
+            openPop();
+        }
+    }
+    function openPop(){
+        
+        var pop=open("https://maps.google.com","popup","width=640,height=480,top=200,left=200");
+        setTimeout(function(){pop.close()}, 5000); // fermeture popup
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+// PRIMITIVES COPIEES PAR VALEUR
+var primiwane = 10;
+var primitou = primiwane;
+primitou += 10;
+
+alert(primiwane+" "+primitou); // 10 20 : modifier la seconde variable ne change pas la première...
+
+// OBJETS COPIES PAR REFERENCE
+function Bagnole(c, a, m) {
+    this.couleur = c;
+    this.annee =  a;
+    this.modele =  m;
+}
+
+var maVoiture = new Bagnole("grise", 2010, "corsa");
+var voitureVoisin = maVoiture;
+voitureVoisin.modele = "Porsche";
+
+alert(maVoiture.modele+" "+voitureVoisin.modele); // Porsche Porsche
+    </script>
+</body>
+
+</html>

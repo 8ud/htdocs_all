@@ -1,0 +1,191 @@
+:root {
+    --themeColor01 : #DFDCDA;
+}
+* {
+    box-sizing: border-box;
+    /* border: 0.5px dotted red; */
+    text-align: center;
+}
+body { background-image: url("../img/bgi.png"); }
+#start, #start button, #countdown, #story {
+    text-shadow: 0 1px 0 #CCCCCC,
+        0 2px 0 #c9c9c9,
+        0 3px 0 #bbb,
+        0 4px 0 #b9b9b9,
+        0 5px 0 #aaa,
+        0 6px 1px rgba(0,0,0,.1),
+        0 0 5px rgba(0,0,0,.1),
+        0 1px 3px rgba(0,0,0,.3),
+        0 3px 5px rgba(0,0,0,.2),
+        0 5px 10px rgba(0,0,0,.25),
+        0 10px 10px rgba(0,0,0,.2),
+        0 20px 20px rgba(0,0,0,.15);
+}
+#start, #countdown, #story {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 5em;
+    position: absolute;
+}
+#start {
+    font-size: 20vw;
+    z-index: 999;
+}
+#start button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+#story {
+    display: none;
+    font-size: 7vh;
+    max-width: 100%;
+    width: 85%;
+}
+#countdown {
+    display: none;
+    font-size: 13vw;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 888;
+}
+#timer, #score {
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    display: none;
+    float: right;
+    font-family: 'Major Mono Display', sans-serif;
+    font-size: 2em;
+    font-weight: bolder;
+    padding: 0.25em 0.5em;
+    margin: 0.25em;
+}
+.alert {
+    color: red !important;
+    text-shadow: 0 0 5px goldenrod;
+}
+#textInput {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em;
+    display: none;
+}
+#textInput input {
+    margin-top: 0.5em;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 0.5em;
+    width: 100%;
+}
+#textInput input[name="read"] {
+    color: white;
+    background-color: black;
+    border: 2px solid white;
+}
+.correct {
+    background-color: lightgreen;
+    border-color: green;
+}
+.incorrect {
+    background-color: lightcoral;
+    border-color: crimson;
+    color: crimson;
+}
+#scSceneWrapper, #spSceneWrapper {
+    bottom: 1%;
+    display: none;
+    min-height: 20%;
+    position: fixed;
+    width: 45%;
+}
+#scSceneWrapper { left: 1%; }
+#scMiniSceneWrapper {
+    margin: -10px 105px 0;
+    width: 150%;
+}
+#spSceneWrapper { right: 1%; }
+#scBubble, #scMiniBubble, #spBubble {
+    background-color: white;
+    border: 2px solid black;
+    box-shadow: 5px 5px 3px #656565;
+    flex: 1;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 0.5em;
+    padding: 0.25em;
+}
+#scBubble::first-letter, #scMiniBubble::first-letter, #spBubble::first-letter {
+    text-transform: uppercase;
+}
+#scBubble, #scMiniBubble {
+    border-radius: 0px 15px 15px 15px;
+    display: none;
+}
+#scMiniBubble {
+    font-size: 0.75em;
+    margin: 0.5em;
+    padding: 0.25em 1em;
+    text-align: left;
+}
+#spBubble {
+    border-radius: 15px 15px 0px 15px;
+    font-family: 'Pacifico', cursive;
+}
+#scAvatar, #scMiniAvatar, #spAvatar {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 25vh;
+    width: 25vh;
+}
+#scAvatar, #scMiniAvatar { background-image: url("../img/sc.png"); }
+#scMiniAvatar {
+    height: 65px;
+    width: 65px;
+}
+#spAvatar { background-image: url("../img/sp.png"); }
+/* #scAvatar, #scMiniAvatar, #spAvatar { background-image: url("../img/tmp.png"); } */
+#chair {
+    bottom: 1%;
+    left: 48%;
+    transform: translate(-50%);
+    position: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    width: 200px;
+    background-image: url("../img/chair.png");
+    background-image: url("../img/toilet.png");
+    display: none;
+}
+#satMan {
+    bottom: 5px;
+    left: 5px;
+    position: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    width: 250px;
+    background-image: url("../img/satMan.png");
+    z-index: 999;
+}
+.triangle {
+    position: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 75px;
+    width: 75px;
+    left: 55%;
+    top: 50%;
+    display: none;
+    transform: translate(-50%, -50%);
+    background-image: url("../img/triangle.png");
+    background-image: url("../img/poop.png");
+}

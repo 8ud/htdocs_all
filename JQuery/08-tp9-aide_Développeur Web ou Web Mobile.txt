@@ -1,0 +1,71 @@
+----------------HTML
+     
+      <!-- SUR IMPRESSION -->
+      <div id="voile">
+         <div id="bloc">
+            <h2>Title</h2>
+            <div id="img"><img  src="images/bali.jpg"/></div>
+            <div id="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, quis autem. Quibusdam labore aperiam blanditiis quia animi culpa numquam praesentium. Excepturi incidunt veritatis laudantium, maiores error tempore perspiciatis maxime velit.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime quis cum illum quidem error, atque iste voluptas adipisci pariatur quaerat quisquam accusantium ad nobis alias sapiente nisi magni culpa id.</div>
+            <div id="closebtn">Fermer</div>
+         </div>
+      </div>
+      <!-- SUR IMPRESSION -->
+   
+
+--------CSS
+
+
+#voile {
+	background-color:rgba(37,51,105,0.78);
+	width:100%;
+	height:100%;
+	display:none;
+	justify-content:center;
+	align-items: center;
+	position:fixed;
+
+}
+#bloc {
+	background-color: white;
+	width:700px;
+	height:700px;
+	padding:30px;
+	display:flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end
+}
+#bloc h2 {
+	color:#257450;
+	align-self: flex-start;
+	text-transform: capitalize;
+}
+#img {
+height:450px;
+width:100%;
+overflow:hidden;
+margin-bottom:30px;
+}
+#img img {
+	width:100%;
+}
+#desc {
+	width:100%;
+	text-align:justify;
+	flex:1;
+}
+#closebtn {
+	padding:15px 30px;
+	color:white;
+	background-color: steelblue;
+	cursor:pointer;
+	transition:all 1s ease;
+}
+#closebtn:hover {
+	
+	background-color: #A00D0D;
+	transform: scaleX(1.05);
+	border-radius: 5px;
+	
+}
